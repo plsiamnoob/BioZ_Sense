@@ -1,0 +1,3 @@
+/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate.dir
+/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/edit_cache.dir
+/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate-complete.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-test.rule"
+		},
+		{
+			"file" : "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"cmsis_core-populate"
+		],
+		"name" : "cmsis_core-populate"
+	}
+}
