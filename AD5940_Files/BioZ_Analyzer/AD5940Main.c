@@ -35,12 +35,11 @@ int32_t BIAShowResult(uint32_t *pData, uint32_t DataCount)
 
   fImpPol_Type *pImp = (fImpPol_Type*)pData;
   AppBIACtrl(BIACTRL_GETFREQ, &freq);
-
-  printf("%.2f, ", freq);
+  
   /*Process data*/
   for(int i=0;i<DataCount;i++)
   {
-    printf("%f, %f \n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
+    printf("%.2f, %f, %f\n", freq, pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
   }
   return 0;
 }

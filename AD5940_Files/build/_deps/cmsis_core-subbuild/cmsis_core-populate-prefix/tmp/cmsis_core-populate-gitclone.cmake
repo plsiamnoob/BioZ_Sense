@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt" AND EXISTS "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt" AND
-  "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt")
+if(EXISTS "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt" AND EXISTS "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt" AND
+  "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt'"
+    "'/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/hamza/ad5940-examples/build/_deps/cmsis_core-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/home/hamza/ad5940-examples/build/_deps/cmsis_core-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -37,7 +37,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git"
             clone --no-checkout --depth 1 --no-single-branch --config "advice.detachedHead=false" "https://github.com/ARM-software/CMSIS_5.git" "cmsis_core-src"
-    WORKING_DIRECTORY "/home/hamza/ad5940-examples/build/_deps"
+    WORKING_DIRECTORY "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -53,7 +53,7 @@ endif()
 execute_process(
   COMMAND "/usr/bin/git"
           checkout "5.9.0" --
-  WORKING_DIRECTORY "/home/hamza/ad5940-examples/build/_deps/cmsis_core-src"
+  WORKING_DIRECTORY "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -66,22 +66,22 @@ if(init_submodules)
   execute_process(
     COMMAND "/usr/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/home/hamza/ad5940-examples/build/_deps/cmsis_core-src"
+    WORKING_DIRECTORY "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/home/hamza/ad5940-examples/build/_deps/cmsis_core-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt" "/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt" "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitclone-lastrun.txt'")
 endif()

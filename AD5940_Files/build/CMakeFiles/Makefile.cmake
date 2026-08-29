@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/hamza/ad5940-examples/CMakeLists.txt"
+  "/home/hamza/BioZ_Sense/AD5940_Files/CMakeLists.txt"
   "CMakeFiles/3.31.11/CMakeASMCompiler.cmake"
   "CMakeFiles/3.31.11/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.11/CMakeSystem.cmake"
-  "/home/hamza/ad5940-examples/toolchain-arm.cmake"
+  "/home/hamza/BioZ_Sense/AD5940_Files/toolchain-arm.cmake"
   "/usr/share/cmake/Modules/CMakeASMCompiler.cmake.in"
   "/usr/share/cmake/Modules/CMakeASMInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCCompiler.cmake.in"

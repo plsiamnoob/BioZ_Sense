@@ -1,6 +1,6 @@
 CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj: \
- /home/hamza/ad5940-examples/ad5940lib/ad5940.c \
- /home/hamza/ad5940-examples/ad5940lib/ad5940.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.c \
+ /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.h \
  /usr/arm-none-eabi/include/math.h /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
  /usr/arm-none-eabi/include/_newlib_version.h \

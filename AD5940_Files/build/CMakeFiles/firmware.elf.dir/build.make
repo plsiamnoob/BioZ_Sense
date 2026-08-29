@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hamza/ad5940-examples
+CMAKE_SOURCE_DIR = /home/hamza/BioZ_Sense/AD5940_Files
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hamza/ad5940-examples/build
+CMAKE_BINARY_DIR = /home/hamza/BioZ_Sense/AD5940_Files/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/firmware.elf.dir/depend.make
@@ -73,102 +73,102 @@ CMakeFiles/firmware.elf.dir/codegen:
 .PHONY : CMakeFiles/firmware.elf.dir/codegen
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj: /home/hamza/ad5940-examples/BioZ_Analyzer/AD5940Main.c
+CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/AD5940Main.c
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj -c /home/hamza/ad5940-examples/BioZ_Analyzer/AD5940Main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/AD5940Main.c
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/BioZ_Analyzer/AD5940Main.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/AD5940Main.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.i
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/BioZ_Analyzer/AD5940Main.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/AD5940Main.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.s
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj: /home/hamza/ad5940-examples/BioZ_Analyzer/BodyImpedance.c
+CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/BodyImpedance.c
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj -c /home/hamza/ad5940-examples/BioZ_Analyzer/BodyImpedance.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/BodyImpedance.c
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/BioZ_Analyzer/BodyImpedance.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/BodyImpedance.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.i
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/BioZ_Analyzer/BodyImpedance.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/BodyImpedance.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/BodyImpedance.c.s
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj: /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c
+CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj -c /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.i
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/ADICUP3029Port.c.s
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj: /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/main.c
+CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/main.c
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj -c /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj -MF CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj.d -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/main.c
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/main.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/main.c > CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.i
 
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029/main.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029/main.c -o CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.s
 
 CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj: /home/hamza/ad5940-examples/ad5940lib/ad5940.c
+CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.c
 CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj -MF CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj.d -o CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj -c /home/hamza/ad5940-examples/ad5940lib/ad5940.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj -MF CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj.d -o CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.c
 
 CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/ad5940lib/ad5940.c > CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.c > CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.i
 
 CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/ad5940lib/ad5940.c -o CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.c -o CMakeFiles/firmware.elf.dir/ad5940lib/ad5940.c.s
 
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj: /home/hamza/ad5940-examples/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c
+CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj -MF CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj.d -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj -c /home/hamza/ad5940-examples/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj -MF CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj.d -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c
 
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c > CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c > CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.i
 
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM3029.c.s
 
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: CMakeFiles/firmware.elf.dir/flags.make
-CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: /home/hamza/ad5940-examples/aducm3029_dfp/Source/system_ADuCM3029.c
+CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/system_ADuCM3029.c
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: CMakeFiles/firmware.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj -MF CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj.d -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj -c /home/hamza/ad5940-examples/aducm3029_dfp/Source/system_ADuCM3029.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj -MF CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj.d -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj -c /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/system_ADuCM3029.c
 
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/ad5940-examples/aducm3029_dfp/Source/system_ADuCM3029.c > CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.i
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/system_ADuCM3029.c > CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.i
 
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/ad5940-examples/aducm3029_dfp/Source/system_ADuCM3029.c -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.s
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/system_ADuCM3029.c -o CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.s
 
 # Object files for target firmware.elf
 firmware_elf_OBJECTS = \
@@ -192,7 +192,7 @@ firmware.elf: CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/GCC/startup_ADuCM
 firmware.elf: CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj
 firmware.elf: CMakeFiles/firmware.elf.dir/build.make
 firmware.elf: CMakeFiles/firmware.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hamza/ad5940-examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable firmware.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable firmware.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/firmware.elf.dir/link.txt --verbose=$(VERBOSE)
 	arm-none-eabi-objcopy -O ihex firmware.elf firmware.hex
 	arm-none-eabi-objcopy -O binary firmware.elf firmware.bin
@@ -207,6 +207,6 @@ CMakeFiles/firmware.elf.dir/clean:
 .PHONY : CMakeFiles/firmware.elf.dir/clean
 
 CMakeFiles/firmware.elf.dir/depend:
-	cd /home/hamza/ad5940-examples/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hamza/ad5940-examples /home/hamza/ad5940-examples /home/hamza/ad5940-examples/build /home/hamza/ad5940-examples/build /home/hamza/ad5940-examples/build/CMakeFiles/firmware.elf.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hamza/BioZ_Sense/AD5940_Files /home/hamza/BioZ_Sense/AD5940_Files /home/hamza/BioZ_Sense/AD5940_Files/build /home/hamza/BioZ_Sense/AD5940_Files/build /home/hamza/BioZ_Sense/AD5940_Files/build/CMakeFiles/firmware.elf.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/firmware.elf.dir/depend
 

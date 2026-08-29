@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(cmsis_core-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/ARM-software/CMSIS_5.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "5.9.0" "GIT_SHALLOW" "TRUE"
-                    SOURCE_DIR          "/home/hamza/ad5940-examples/build/_deps/cmsis_core-src"
-                    BINARY_DIR          "/home/hamza/ad5940-examples/build/_deps/cmsis_core-build"
+                    SOURCE_DIR          "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src"
+                    BINARY_DIR          "/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

@@ -1,6 +1,6 @@
 CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj: \
- /home/hamza/ad5940-examples/BioZ_Analyzer/AD5940Main.c \
- /home/hamza/ad5940-examples/ad5940lib/ad5940.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/AD5940Main.c \
+ /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.h \
  /usr/arm-none-eabi/include/math.h /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
  /usr/arm-none-eabi/include/_newlib_version.h \
@@ -24,5 +24,5 @@ CMakeFiles/firmware.elf.dir/BioZ_Analyzer/AD5940Main.c.obj: \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \
- /home/hamza/ad5940-examples/ad5940lib/AD5940.h \
- /home/hamza/ad5940-examples/BioZ_Analyzer/BodyImpedance.h
+ /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/AD5940.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/BodyImpedance.h

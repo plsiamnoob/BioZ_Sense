@@ -1,5 +1,5 @@
 CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: \
- /home/hamza/ad5940-examples/aducm3029_dfp/Source/system_ADuCM3029.c \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Source/system_ADuCM3029.c \
  /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
@@ -7,32 +7,32 @@ CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: \
  /usr/arm-none-eabi/include/_newlib_version.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/system_ADuCM3029.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/system_ADuCM3029.h \
  /usr/lib/gcc/arm-none-eabi/15.2.0/include/stddef.h \
  /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdbool.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/adi_processor.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/ADuCM3029.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/ADuCM3029_cdef.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/ADuCM3029_def.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/ADuCM302x.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/adi_cio_macros.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/ADuCM302x_cdef.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/ADuCM302x.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/ADuCM3029_device.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/ADuCM3029_typedefs.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/ADuCM302x_typedefs.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/ADuCM302x_device.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/sys/ADuCM302x_typedefs.h \
- /home/hamza/ad5940-examples/build/_deps/cmsis_core-src/CMSIS/Core/Include/core_cm3.h \
- /home/hamza/ad5940-examples/build/_deps/cmsis_core-src/CMSIS/Core/Include/cmsis_version.h \
- /home/hamza/ad5940-examples/build/_deps/cmsis_core-src/CMSIS/Core/Include/cmsis_compiler.h \
- /home/hamza/ad5940-examples/build/_deps/cmsis_core-src/CMSIS/Core/Include/cmsis_gcc.h \
- /home/hamza/ad5940-examples/build/_deps/cmsis_core-src/CMSIS/Core/Include/mpu_armv7.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/system_ADuCM3029.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/adi_callback.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/rtos_map/adi_rtos_map.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/config/adi_global_config.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/rtos_map/adi_rtos_map_noos.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/drivers/pwr/adi_pwr.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/adi_cyclecount.h \
- /home/hamza/ad5940-examples/aducm3029_dfp/Include/config/adi_cycle_counting_config.h
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/adi_processor.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_cdef.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_def.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/adi_cio_macros.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x_cdef.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_device.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_typedefs.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x_typedefs.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x_device.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x_typedefs.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src/CMSIS/Core/Include/core_cm3.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src/CMSIS/Core/Include/cmsis_version.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src/CMSIS/Core/Include/cmsis_compiler.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src/CMSIS/Core/Include/cmsis_gcc.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src/CMSIS/Core/Include/mpu_armv7.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/system_ADuCM3029.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/adi_callback.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map/adi_rtos_map.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/config/adi_global_config.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map/adi_rtos_map_noos.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/drivers/pwr/adi_pwr.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/adi_cyclecount.h \
+ /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/config/adi_cycle_counting_config.h

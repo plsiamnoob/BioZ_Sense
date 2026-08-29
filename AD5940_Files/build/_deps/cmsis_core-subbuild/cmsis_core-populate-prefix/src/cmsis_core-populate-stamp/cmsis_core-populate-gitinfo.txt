@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitclone.cmake
-source_dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-src
-work_dir=/home/hamza/ad5940-examples/build/_deps
+command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitclone.cmake
+source_dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src
+work_dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps
 repository=https://github.com/ARM-software/CMSIS_5.git
 remote=origin
 init_submodules=TRUE

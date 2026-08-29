@@ -4,7 +4,7 @@
 # compile C with /usr/bin/arm-none-eabi-gcc
 C_DEFINES = -DADUCM3029 -DCHIPSEL_594X -D__ADUCM3029__ -D__ADUCM302X__
 
-C_INCLUDES = -I/home/hamza/ad5940-examples/BioZ_Analyzer -I/home/hamza/ad5940-examples/BioZ_Analyzer/ADICUP3029 -I/home/hamza/ad5940-examples/ad5940lib -I/home/hamza/ad5940-examples/aducm3029_dfp/Include -I/home/hamza/ad5940-examples/aducm3029_dfp/Include/config -I/home/hamza/ad5940-examples/aducm3029_dfp/Include/drivers -I/home/hamza/ad5940-examples/aducm3029_dfp/Include/rtos_map -I/home/hamza/ad5940-examples/aducm3029_dfp/Include/sys -I/home/hamza/ad5940-examples/aducm3029_dfp/config -I/home/hamza/ad5940-examples/build/_deps/cmsis_core-src/CMSIS/Core/Include
+C_INCLUDES = -I/home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer -I/home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/ADICUP3029 -I/home/hamza/BioZ_Sense/AD5940_Files/ad5940lib -I/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include -I/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/config -I/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/drivers -I/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map -I/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys -I/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/config -I/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src/CMSIS/Core/Include
 
 C_FLAGS = -mcpu=cortex-m3 -mthumb -O2 -Wall -ffunction-sections -fdata-sections
 

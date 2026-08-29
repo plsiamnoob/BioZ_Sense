@@ -8,6 +8,7 @@ Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
 #include "ad5940.h"
 #include "BodyImpedance.h"
 
+#define STOP_FREQ 150000.0f
 /* External result printer provided by AD5940Main.c */
 extern int32_t BIAShowResult(uint32_t *pData, uint32_t DataCount);
 
@@ -75,6 +76,7 @@ static void LocalAD5940BIAStructInit(void)
   pBIACfg->MaxSeqLen = 512;
   pBIACfg->RcalVal = 10000.0f; /* 10kOhm RCAL */
   pBIACfg->SinFreq = 50000.0f; /* 50kHz excitation frequency */
+  pBIACfg->SweepCfg.SweepStop = STOP_FREQ;
   pBIACfg->FifoThresh = 4;
   pBIACfg->BiaODR = 20.0f;
   pBIACfg->NumOfData = -1;
@@ -122,6 +124,10 @@ void AD5940_Main_Routine(void)
       {
         BIAShowResult(AppBuff, temp);
       }
+      float freq = 0.0f;
+      AppBIACtrl(BIACTRL_GETFREQ, &freq);
+      if(freq == STOP_FREQ) printf("Done \n");
+      
       heartbeat = 0;
     }
     else

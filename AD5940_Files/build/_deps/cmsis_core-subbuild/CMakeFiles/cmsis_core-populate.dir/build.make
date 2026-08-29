@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild
+CMAKE_SOURCE_DIR = /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild
+CMAKE_BINARY_DIR = /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild
 
 # Utility rule file for cmsis_core-populate.
 
@@ -77,60 +77,60 @@ CMakeFiles/cmsis_core-populate-complete: cmsis_core-populate-prefix/src/cmsis_co
 CMakeFiles/cmsis_core-populate-complete: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build
 CMakeFiles/cmsis_core-populate-complete: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install
 CMakeFiles/cmsis_core-populate-complete: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'cmsis_core-populate'"
-	/usr/bin/cmake -E make_directory /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles
-	/usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate-complete
-	/usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'cmsis_core-populate'"
+	/usr/bin/cmake -E make_directory /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles
+	/usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate-complete
+	/usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-done
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update:
 .PHONY : cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'cmsis_core-populate'"
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'cmsis_core-populate'"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure: cmsis_core-populate-prefix/tmp/cmsis_core-populate-cfgcmd.txt
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'cmsis_core-populate'"
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'cmsis_core-populate'"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-gitinfo.txt
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'cmsis_core-populate'"
-	cd /home/hamza/ad5940-examples/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitclone.cmake
-	cd /home/hamza/ad5940-examples/build/_deps && /usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'cmsis_core-populate'"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitclone.cmake
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps && /usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'cmsis_core-populate'"
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'cmsis_core-populate'"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'cmsis_core-populate'"
-	/usr/bin/cmake -Dcfgdir= -P /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-mkdirs.cmake
-	/usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'cmsis_core-populate'"
+	/usr/bin/cmake -Dcfgdir= -P /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-mkdirs.cmake
+	/usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-mkdir
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch-info.txt
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'cmsis_core-populate'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'cmsis_core-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch
+	/usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update:
 .PHONY : cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-test: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'cmsis_core-populate'"
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'cmsis_core-populate'"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E echo_append
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-build && /usr/bin/cmake -E touch /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-test
 
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update: cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitupdate.cmake
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update-info.txt
 cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update: cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'cmsis_core-populate'"
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-src && /usr/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'cmsis_core-populate'"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-src && /usr/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/tmp/cmsis_core-populate-gitupdate.cmake
 
 CMakeFiles/cmsis_core-populate.dir/codegen:
 .PHONY : CMakeFiles/cmsis_core-populate.dir/codegen
@@ -157,6 +157,6 @@ CMakeFiles/cmsis_core-populate.dir/clean:
 .PHONY : CMakeFiles/cmsis_core-populate.dir/clean
 
 CMakeFiles/cmsis_core-populate.dir/depend:
-	cd /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild /home/hamza/ad5940-examples/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild /home/hamza/BioZ_Sense/AD5940_Files/build/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/cmsis_core-populate.dir/depend
 
