@@ -20,6 +20,7 @@ uint32_t AD5940_ClrMCUIntFlag(void);
 void AD5940_Main_Routine(void);
 static void LocalAD5940PlatformCfg(void);
 static void LocalAD5940BIAStructInit(void);
+void ReadUART(char *buffer, int len);
 
 static void LocalAD5940PlatformCfg(void)
 {
@@ -108,33 +109,48 @@ void AD5940_Main_Routine(void)
   LocalAD5940PlatformCfg();
   LocalAD5940BIAStructInit();
 
-  AppBIAInit(AppBuff, 512);
-  AppBIACtrl(BIACTRL_START, 0);
-
   volatile uint32_t heartbeat = 0;
+  char input[32];
   while (1)
   {
-    /* Check if the AD5940 pulled the GP0 interrupt pin HIGH */
-    if (AD5940_GetMCUIntFlag())
+    fflush(stdout);
+    ReadUART(input, 32);
+    //ReadUART(input, 32);
+    if ((strcmp(input, "START")) == 0)
     {
-      AD5940_ClrMCUIntFlag();
-      temp = 512;
-      AppBIAISR(AppBuff, &temp);
-      if (temp > 0)
+      AppBIAInit(AppBuff, 512);
+      AppBIACtrl(BIACTRL_START, 0);
+      while (1)
       {
-        BIAShowResult(AppBuff, temp);
-      }
-      float freq = 0.0f;
-      AppBIACtrl(BIACTRL_GETFREQ, &freq);
-      if(freq == STOP_FREQ) printf("Done \n");
-      
-      heartbeat = 0;
-    }
-    else
-    {
-      if (++heartbeat > 3000000)
-      {
-        heartbeat = 0;
+        {
+          /* Check if the AD5940 pulled the GP0 interrupt pin HIGH */
+          if (AD5940_GetMCUIntFlag())
+          {
+            AD5940_ClrMCUIntFlag();
+            temp = 512;
+            AppBIAISR(AppBuff, &temp);
+            if (temp > 0)
+            {
+              BIAShowResult(AppBuff, temp);
+            }
+            float freq = 0.0f;
+            AppBIACtrl(BIACTRL_GETFREQ, &freq);
+            if (freq == STOP_FREQ)
+            {
+              printf("Done \n");
+              break;
+            }
+
+            heartbeat = 0;
+          }
+          else
+          {
+            if (++heartbeat > 3000000)
+            {
+              heartbeat = 0;
+            }
+          }
+        }
       }
     }
   }
@@ -223,6 +239,58 @@ int UrtCfg(int iBaud)
   NVIC_EnableIRQ(UART_EVT_IRQn);
   pADI_UART0->COMIEN = BITM_UART_COMIEN_ERBFI | BITM_UART_COMIEN_ELSI;
   return pADI_UART0->COMLSR;
+}
+int UART_GetChar_Direct(void)
+{
+    // Check if Data Ready bit (Bit 0) in Line Status Register is high
+    if (pADI_UART0->COMLSR & (1 << 0)) 
+    {
+        return (int)(pADI_UART0->COMRX); // Read received byte
+    }
+    return -1; // Return -1 if RX FIFO is empty
+}
+
+int UART0_GetChar_Direct(void)
+{
+    // Check if Data Ready bit (Bit 0) is set in COMLSR
+    if (pADI_UART0->COMLSR & (1 << 0)) 
+    {
+        return (int)(pADI_UART0->COMRX); // Read received byte
+    }
+    return -1;
+}
+
+void ReadUART(char *buffer, int len)
+{
+    int i = 0;
+
+    // CRITICAL: Disable UART RX interrupt so BSP ISR doesn't steal bytes
+    pADI_UART0->COMIEN &= ~(1 << 0); 
+
+    while (i < len - 1)
+    {
+        int tempchar = UART0_GetChar_Direct();
+        if (tempchar == -1)
+        {
+            continue; // Keep waiting for RX byte
+        }
+
+        if (tempchar == '\r' || tempchar == '\n')
+        {
+            if (i > 0)
+            {
+                break; // Complete command received
+            }
+            continue; // Ignore leading newlines
+        }
+
+        buffer[i++] = (char)tempchar;
+        putchar(tempchar); // Echo character back
+        fflush(stdout);
+    }
+    buffer[i] = '\0'; // Null-terminate string
+    printf("\n");
+    fflush(stdout);
 }
 
 #if defined(__GNUC__)

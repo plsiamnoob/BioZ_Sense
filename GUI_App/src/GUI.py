@@ -6,6 +6,9 @@ frequency, impedance, phase = [], [], []
 
 ser = serial.Serial('/dev/ttyACM0', 230400, timeout = 1)
 
+ser.write(b"START\n")
+ser.flush()
+
 try:
     while True:
         data = ser.readline().decode('utf-8').strip()
