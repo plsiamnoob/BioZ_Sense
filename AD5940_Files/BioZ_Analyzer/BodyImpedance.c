@@ -612,7 +612,7 @@ AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount)
 }
 
 
-AD5940Err AppBIAMeasureSingle(float targetFreq, fImpPol_Type *pResult)
+AD5940Err AppBIAMeasureSingle(float targetFreq, float* impedance, float* phase)
 {
   uint32_t buffer[4]; /* Buffer for 4 FIFO words (Volt/Curr Real/Imag) */
   uint32_t count = 4;
@@ -640,8 +640,8 @@ AD5940Err AppBIAMeasureSingle(float targetFreq, fImpPol_Type *pResult)
   if (count > 0)
   {
     fImpPol_Type *pPol = (fImpPol_Type *)buffer;
-    pResult->Magnitude = pPol->Magnitude;
-    pResult->Phase = pPol->Phase;
+    *impedance = pPol->Magnitude;
+    *phase = pPol->Phase;
   }
 
   return AD5940ERR_OK;
