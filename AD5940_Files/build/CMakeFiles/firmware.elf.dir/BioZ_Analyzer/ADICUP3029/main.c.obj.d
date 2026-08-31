@@ -20,6 +20,9 @@ CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj: \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \
+ /usr/arm-none-eabi/include/stdlib.h \
+ /usr/arm-none-eabi/include/machine/stdlib.h \
+ /usr/arm-none-eabi/include/alloca.h \
  /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029.h \
  /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_cdef.h \
  /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_def.h \

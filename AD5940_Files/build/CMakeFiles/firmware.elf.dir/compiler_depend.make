@@ -99,13 +99,16 @@ CMakeFiles/firmware.elf.dir/BioZ_Analyzer/ADICUP3029/main.c.obj: /home/hamza/Bio
   _deps/cmsis_core-src/CMSIS/Core/Include/mpu_armv7.h \
   /usr/arm-none-eabi/include/_ansi.h \
   /usr/arm-none-eabi/include/_newlib_version.h \
+  /usr/arm-none-eabi/include/alloca.h \
   /usr/arm-none-eabi/include/machine/_default_types.h \
   /usr/arm-none-eabi/include/machine/_types.h \
   /usr/arm-none-eabi/include/machine/ieeefp.h \
+  /usr/arm-none-eabi/include/machine/stdlib.h \
   /usr/arm-none-eabi/include/math.h \
   /usr/arm-none-eabi/include/newlib.h \
   /usr/arm-none-eabi/include/stdint.h \
   /usr/arm-none-eabi/include/stdio.h \
+  /usr/arm-none-eabi/include/stdlib.h \
   /usr/arm-none-eabi/include/string.h \
   /usr/arm-none-eabi/include/strings.h \
   /usr/arm-none-eabi/include/sys/_intsup.h \
@@ -252,6 +255,10 @@ CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: /home/h
   /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdint.h
 
 
+/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map/adi_rtos_map_noos.h:
+
+/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map/adi_rtos_map.h:
+
 /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdint.h:
 
 /home/hamza/BioZ_Sense/AD5940_Files/BioZ_Analyzer/BodyImpedance.h:
@@ -260,7 +267,11 @@ CMakeFiles/firmware.elf.dir/aducm3029_dfp/Source/system_ADuCM3029.c.obj: /home/h
 
 /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/system_ADuCM3029.h:
 
+/usr/arm-none-eabi/include/alloca.h:
+
 /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdarg.h:
+
+/usr/arm-none-eabi/include/stdlib.h:
 
 /usr/lib/gcc/arm-none-eabi/15.2.0/include/stddef.h:
 
@@ -336,11 +347,17 @@ _deps/cmsis_core-src/CMSIS/Core/Include/cmsis_compiler.h:
 
 /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/ADuCM3029_typedefs.h:
 
+/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/drivers/pwr/adi_pwr.h:
+
+/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/adi_processor.h:
+
 /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdbool.h:
 
 /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x_cdef.h:
 
 _deps/cmsis_core-src/CMSIS/Core/Include/cmsis_gcc.h:
+
+/usr/arm-none-eabi/include/machine/stdlib.h:
 
 /home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/sys/ADuCM302x_device.h:
 
@@ -363,11 +380,3 @@ _deps/cmsis_core-src/CMSIS/Core/Include/mpu_armv7.h:
 /usr/arm-none-eabi/include/sys/lock.h:
 
 /home/hamza/BioZ_Sense/AD5940_Files/ad5940lib/ad5940.c:
-
-/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/adi_processor.h:
-
-/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/drivers/pwr/adi_pwr.h:
-
-/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map/adi_rtos_map.h:
-
-/home/hamza/BioZ_Sense/AD5940_Files/aducm3029_dfp/Include/rtos_map/adi_rtos_map_noos.h:

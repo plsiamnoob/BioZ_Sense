@@ -4,6 +4,7 @@ Copyright (c) 2017-2019 Analog Devices, Inc. All Rights Reserved.
 
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include "ADuCM3029.h"
 #include "ad5940.h"
 #include "BodyImpedance.h"
@@ -19,7 +20,7 @@ uint32_t AD5940_GetMCUIntFlag(void);
 uint32_t AD5940_ClrMCUIntFlag(void);
 void AD5940_Main_Routine(void);
 static void LocalAD5940PlatformCfg(void);
-static void LocalAD5940BIAStructInit(void);
+static void LocalAD5940BIAStructInit(float freq_start, float freq_end, float exc_freq, bool sweep_en, bool log_sweep);
 void ReadUART(char *buffer, int len);
 
 static void LocalAD5940PlatformCfg(void)
@@ -68,7 +69,7 @@ static void LocalAD5940PlatformCfg(void)
   AD5940_INTCClrFlag(AFEINTSRC_ALLINT);
 }
 
-static void LocalAD5940BIAStructInit(void)
+static void LocalAD5940BIAStructInit(float freq_start, float freq_end, float exc_freq, bool sweep_en, bool log_sweep)
 {
   AppBIACfg_Type *pBIACfg;
   AppBIAGetCfg(&pBIACfg);
@@ -76,15 +77,17 @@ static void LocalAD5940BIAStructInit(void)
   pBIACfg->SeqStartAddr = 0;
   pBIACfg->MaxSeqLen = 512;
   pBIACfg->RcalVal = 10000.0f; /* 10kOhm RCAL */
-  pBIACfg->SinFreq = 50000.0f; /* 50kHz excitation frequency */
-  pBIACfg->SweepCfg.SweepStop = STOP_FREQ;
+  pBIACfg->SweepCfg.SweepStart = freq_start;
+  pBIACfg->SweepCfg.SweepStop = freq_end;
+  pBIACfg->SinFreq = exc_freq; /* 50kHz excitation frequency */
   pBIACfg->FifoThresh = 4;
   pBIACfg->BiaODR = 20.0f;
   pBIACfg->NumOfData = -1;
   pBIACfg->DftNum = DFTNUM_8192;
   pBIACfg->DftSrc = DFTSRC_SINC3;
   pBIACfg->HanWinEn = bTRUE;
-  pBIACfg->SweepCfg.SweepEn = bTRUE;
+  pBIACfg->SweepCfg.SweepEn = sweep_en;
+  pBIACfg->SweepCfg.SweepLog = log_sweep;
 }
 
 int main(void)
@@ -107,48 +110,64 @@ void AD5940_Main_Routine(void)
   AD5940_Initialize();
 
   LocalAD5940PlatformCfg();
-  LocalAD5940BIAStructInit();
 
   volatile uint32_t heartbeat = 0;
-  char input[32];
+  char start_freq_char[11];
+  char stop_freq_char[11];
+  char excitation_freq_char[11];
+  char sweep_char[2];
+  char log_sweep_char[2];
+  int start_freq, stop_freq, excitation_freq;
+  bool sweep_bit, log_sweep_bit;
   while (1)
   {
     fflush(stdout);
-    ReadUART(input, 32);
-    //ReadUART(input, 32);
-    if ((strcmp(input, "START")) == 0)
+    ReadUART(start_freq_char, 11);
+    ReadUART(stop_freq_char, 11);
+    ReadUART(excitation_freq_char, 11);
+    ReadUART(sweep_char, 3);
+    ReadUART(log_sweep_char, 3);
+    if (!(start_freq = atoi(start_freq_char)))
+      start_freq = 10000;
+    if (!(stop_freq = atoi(stop_freq_char)))
+      stop_freq = 150000;
+    if (!(excitation_freq = atoi(excitation_freq_char)))
+      excitation_freq = 50000;
+    if (!(sweep_bit = atoi(sweep_char)))
+      sweep_bit = true;
+    if (!(log_sweep_bit = atoi(log_sweep_char)))
+      log_sweep_bit = true;
+    LocalAD5940BIAStructInit(start_freq, stop_freq, excitation_freq, sweep_bit, log_sweep_bit);
+    AppBIAInit(AppBuff, 512);
+    AppBIACtrl(BIACTRL_START, 0);
+    while (1)
     {
-      AppBIAInit(AppBuff, 512);
-      AppBIACtrl(BIACTRL_START, 0);
-      while (1)
       {
+        /* Check if the AD5940 pulled the GP0 interrupt pin HIGH */
+        if (AD5940_GetMCUIntFlag())
         {
-          /* Check if the AD5940 pulled the GP0 interrupt pin HIGH */
-          if (AD5940_GetMCUIntFlag())
+          AD5940_ClrMCUIntFlag();
+          temp = 512;
+          AppBIAISR(AppBuff, &temp);
+          if (temp > 0)
           {
-            AD5940_ClrMCUIntFlag();
-            temp = 512;
-            AppBIAISR(AppBuff, &temp);
-            if (temp > 0)
-            {
-              BIAShowResult(AppBuff, temp);
-            }
-            float freq = 0.0f;
-            AppBIACtrl(BIACTRL_GETFREQ, &freq);
-            if (freq == STOP_FREQ)
-            {
-              printf("Done \n");
-              break;
-            }
-
-            heartbeat = 0;
+            BIAShowResult(AppBuff, temp);
           }
-          else
+          float freq = 0.0f;
+          AppBIACtrl(BIACTRL_GETFREQ, &freq);
+          if (freq >= stop_freq)
           {
-            if (++heartbeat > 3000000)
-            {
-              heartbeat = 0;
-            }
+            printf("Done \n");
+            break;
+          }
+
+          heartbeat = 0;
+        }
+        else
+        {
+          if (++heartbeat > 3000000)
+          {
+            heartbeat = 0;
           }
         }
       }
@@ -242,55 +261,41 @@ int UrtCfg(int iBaud)
 }
 int UART_GetChar_Direct(void)
 {
-    // Check if Data Ready bit (Bit 0) in Line Status Register is high
-    if (pADI_UART0->COMLSR & (1 << 0)) 
-    {
-        return (int)(pADI_UART0->COMRX); // Read received byte
-    }
-    return -1; // Return -1 if RX FIFO is empty
+  // Check if Data Ready bit (Bit 0) in Line Status Register is high
+  if (pADI_UART0->COMLSR & (1 << 0))
+  {
+    return (int)(pADI_UART0->COMRX); // Read received byte
+  }
+  return -1; // Return -1 if RX FIFO is empty
 }
 
 int UART0_GetChar_Direct(void)
 {
-    // Check if Data Ready bit (Bit 0) is set in COMLSR
-    if (pADI_UART0->COMLSR & (1 << 0)) 
-    {
-        return (int)(pADI_UART0->COMRX); // Read received byte
-    }
-    return -1;
+  if (pADI_UART0->COMLSR & (1 << 0))
+    return (int)(pADI_UART0->COMRX);
+  return -1;
 }
 
 void ReadUART(char *buffer, int len)
 {
-    int i = 0;
-
-    // CRITICAL: Disable UART RX interrupt so BSP ISR doesn't steal bytes
-    pADI_UART0->COMIEN &= ~(1 << 0); 
-
-    while (i < len - 1)
+  int i = 0;
+  pADI_UART0->COMIEN &= ~(1 << 0);
+  while (i < len - 1)
+  {
+    int tempchar = UART0_GetChar_Direct();
+    if (tempchar == -1)
+      continue;
+    if (tempchar == '\r' || tempchar == '\n')
     {
-        int tempchar = UART0_GetChar_Direct();
-        if (tempchar == -1)
-        {
-            continue; // Keep waiting for RX byte
-        }
-
-        if (tempchar == '\r' || tempchar == '\n')
-        {
-            if (i > 0)
-            {
-                break; // Complete command received
-            }
-            continue; // Ignore leading newlines
-        }
-
-        buffer[i++] = (char)tempchar;
-        putchar(tempchar); // Echo character back
-        fflush(stdout);
+      if (i > 0)
+        break;
+      continue;
     }
-    buffer[i] = '\0'; // Null-terminate string
-    printf("\n");
+    buffer[i++] = (char)tempchar;
     fflush(stdout);
+  }
+  buffer[i] = '\0';
+  fflush(stdout);
 }
 
 #if defined(__GNUC__)

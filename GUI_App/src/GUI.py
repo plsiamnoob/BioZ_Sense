@@ -6,8 +6,27 @@ frequency, impedance, phase = [], [], []
 
 ser = serial.Serial('/dev/ttyACM0', 230400, timeout = 1)
 
-ser.write(b"START\n")
+start_frequency = 1000
+stop_frequency = 100000
+excitation_frequency = 50000
+sweep = 1
+log_sweep = 0
+
+ser.write(f"{start_frequency}\n".encode('utf-8'))
 ser.flush()
+
+ser.write(f"{stop_frequency}\n".encode('utf-8'))
+ser.flush()
+
+ser.write(f"{excitation_frequency}\n".encode('utf-8'))
+ser.flush()
+
+ser.write(f"{sweep}\n".encode('utf-8'))
+ser.flush()
+
+ser.write(f"{log_sweep}\n".encode('utf-8'))
+ser.flush()
+
 
 try:
     while True:
