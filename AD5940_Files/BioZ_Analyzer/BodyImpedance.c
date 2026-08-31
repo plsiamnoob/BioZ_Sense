@@ -591,8 +591,8 @@ AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount)
   if (AD5940_INTCTestFlag(AFEINTC_0, AFEINTSRC_DATAFIFOTHRESH) == bTRUE)
   {
     /* Now there should be 4 data in FIFO */
-    FifoCnt = (AD5940_FIFOGetCnt() / 4) * 4;
-
+    FifoCnt = (AD5940_FIFOGetCnt() / 4) * 4; //get how many data values were returned.
+    // ^ probably given by the function called on line 591.
     if (FifoCnt > BuffCount)
     {
       ///@todo buffer is limited.
@@ -611,6 +611,41 @@ AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount)
   return 0;
 }
 
+
+AD5940Err AppBIAMeasureSingle(float targetFreq, fImpPol_Type *pResult)
+{
+  uint32_t buffer[4]; /* Buffer for 4 FIFO words (Volt/Curr Real/Imag) */
+  uint32_t count = 4;
+
+  if (pResult == NULL) return AD5940ERR_APPERROR;
+
+  /* 1. Disable sweep & set target frequency */
+  AppBIACfg.SweepCfg.SweepEn = bFALSE; /* Prevents AppBIADataProcess from advancing sweep state */
+  AppBIACfg.SinFreq = targetFreq;
+  AD5940_WGFreqSet(targetFreq, AppBIACfg.SysClkFreq);
+
+  /* 2. Wake AFE and trigger measurement sequence */
+  AD5940_WakeUp(10);
+  AD5940_SEQAONTrigger();
+
+  /* 3. Poll for FIFO threshold flag */
+  uint32_t timeout = 100000;
+  while ((AD5940_INTCTestFlag(AFEINTC_0, AFEINTSRC_DATAFIFOTHRESH) == bFALSE) && --timeout);
+  if (timeout == 0) return AD5940ERR_TIMEOUT;
+
+  /* 4. Run ISR (Reads FIFO, sign-extends 18-bit data, and calls AppBIADataProcess) */
+  AppBIAISR(buffer, &count);
+
+  /* 5. Extract calibrated result (buffer was cast and converted in-place) */
+  if (count > 0)
+  {
+    fImpPol_Type *pPol = (fImpPol_Type *)buffer;
+    pResult->Magnitude = pPol->Magnitude;
+    pResult->Phase = pPol->Phase;
+  }
+
+  return AD5940ERR_OK;
+}
 /**
  * @}
  */
