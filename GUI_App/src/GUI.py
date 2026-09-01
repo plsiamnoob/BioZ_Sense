@@ -6,10 +6,10 @@ frequency, impedance, phase = [], [], []
 
 ser = serial.Serial('/dev/ttyACM0', 230400, timeout = 1)
 
-start_frequency = 1000
-stop_frequency = 100000
+start_frequency = 30000
+stop_frequency = 30000
 excitation_frequency = 50000
-sweep = 1
+sweep = 0
 log_sweep = 0
 
 ser.write(f"{start_frequency}\n".encode('utf-8'))
@@ -47,7 +47,9 @@ try:
 finally:
     ser.close()
 
+print(impedance, phase)
 
+'''
 q25_imp, q75_imp = np.percentile(impedance, (25, 75))
 iqr_imp = q25_imp - q75_imp
 imp_lower_bound = q25_imp - (iqr_imp * 1.5)
@@ -83,7 +85,7 @@ plt.show()
 
         
             
-
+'''
 
 
 

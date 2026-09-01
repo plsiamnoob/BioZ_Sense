@@ -39,7 +39,7 @@ int32_t BIAShowResult(uint32_t *pData, uint32_t DataCount)
   /*Process data*/
   for(int i=0;i<DataCount;i++)
   {
-    printf("%.2f, %f, %f\n", freq, pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
+    printf("%f, %f\n", pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
   }
   return 0;
 }

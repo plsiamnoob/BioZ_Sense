@@ -90,5 +90,5 @@ AD5940Err AppBIAGetCfg(void *pCfg);
 AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize);
 AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount);
 AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara);
-
+AD5940Err AppBIAMeasureSingle(uint32_t *pBuffer, uint32_t BufferSize, float targetFreq, float* impedance, float* phase);
 #endif
