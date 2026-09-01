@@ -22,7 +22,6 @@ add_compile_definitions(
 # Directory paths
 set(EXAMPLE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/BioZ_Analyzer")
 set(DFP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/aducm3029_dfp")
-
 # Target GCC-specific startup and system files
 file(GLOB GCC_STARTUP "${DFP_DIR}/Source/GCC/startup_ADuCM3029.*")
 set(SYSTEM_SRC "${DFP_DIR}/Source/system_ADuCM3029.c")

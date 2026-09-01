@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/cmsis_core-populate-prefix/src/cmsis_core-populate-stamp/cmsis_core-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"cmsis_core-populate"
+		],
+		"name" : "cmsis_core-populate"
+	}
+}

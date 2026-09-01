@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/cmake_install.cmake",
+		"C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/AD5940_Files/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

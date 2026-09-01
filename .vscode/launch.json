@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run GUI (Full Pipeline: Build All + Flash)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.bat",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/build/gui/GUI_App",
+      "environment": [
+        {
+          "value": "C:\\msys64\\ucrt64\\bin;${env:PATH}"
+        }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "preLaunchTask": "Build All & Flash Firmware"
+    },
+    {
+      "name": "Run GUI Only",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.bat",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/build/gui/GUI_App",
+      "environment": [
+        {
+          "name": "PATH",
+          "value": "C:\\msys64\\ucrt64\\bin;${env:PATH}"
+        }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "preLaunchTask": "Build GUI Only"
+    }
+  ]
+}

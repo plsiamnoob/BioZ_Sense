@@ -1,0 +1,49 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "firmware-arm",
+      "displayName": "Firmware (ARM Bare-Metal)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/firmware",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/toolchain-arm.cmake",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "BUILD_FIRMWARE": "ON",
+        "BUILD_GUI": "OFF"
+      }
+    },
+    {
+      "name": "gui-x86_64",
+      "displayName": "GUI App (Windows x86_64)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/gui",
+      "environment": {
+        "PATH": "C:/msys64/ucrt64/bin;$penv{PATH}"
+      },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "ninja",
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "CMAKE_PREFIX_PATH": "C:/msys64/ucrt64",
+        "BUILD_FIRMWARE": "OFF",
+        "BUILD_GUI": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "firmware-arm",
+      "configurePreset": "firmware-arm",
+      "displayName": "Build Firmware (ARM)"
+    },
+    {
+      "name": "gui-x86_64",
+      "configurePreset": "gui-x86_64",
+      "displayName": "Build GUI (x86_64)"
+    }
+  ]
+}

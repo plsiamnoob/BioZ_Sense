@@ -112,7 +112,7 @@ void AD5940BIAStructInit(void)
 
 void AD5940_Main(void)
 {
-  static uint32_t IntCount;
+  //static uint32_t IntCount;
   static uint32_t count;
   uint32_t temp;
   

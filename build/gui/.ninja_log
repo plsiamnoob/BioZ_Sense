@@ -1,0 +1,9 @@
+# ninja log v7
+16	602	8100094462618862	GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
+16	602	8100094462618862	GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
+16	602	8100094462618862	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
+16	602	8100094462618862	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
+617	2360	8100094463063202	GUI_App/CMakeFiles/GUI_App.dir/main.cpp.obj	695c8faaebb6e384
+611	2574	8100094463009778	GUI_App/CMakeFiles/GUI_App.dir/GUI_App_autogen/mocs_compilation.cpp.obj	76760c08bdfd03f8
+622	2791	8100094463118800	GUI_App/CMakeFiles/GUI_App.dir/mainwindow.cpp.obj	a4e552386db33110
+2792	2953	8100094484811461	GUI_App/GUI_App.exe	ec5c941a2955f16

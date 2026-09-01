@@ -1,0 +1,46 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // Sub-tasks
+    {
+      "label": "Build Firmware (ARM)",
+      "type": "shell",
+      "command": "cmake --preset firmware-arm; cmake --build --preset firmware-arm",
+      "group": "none"
+    },
+    {
+      "label": "Build GUI (x86_64)",
+      "type": "shell",
+      "command": "cmake --preset gui-x86_64; cmake --build --preset gui-x86_64",
+      "group": "none"
+    },
+    {
+      "label": "Flash AD5940 via pyOCD",
+      "type": "shell",
+      "command": "python -m pyocd flash -t aducm3029 build/firmware/AD5940_Files/firmware.elf",
+      "group": "none"
+    },
+
+    // User Workflows
+    {
+      "label": "Build All & Flash Firmware",
+      "dependsOn": [
+        "Build Firmware (ARM)",
+        "Build GUI (x86_64)",
+        "Flash AD5940 via pyOCD"
+      ],
+      "dependsOrder": "sequence",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build GUI Only",
+      "dependsOn": [
+        "Build GUI (x86_64)"
+      ],
+      "group": "build"
+    }
+  ]
+}
