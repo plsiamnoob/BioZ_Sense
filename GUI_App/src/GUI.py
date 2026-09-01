@@ -4,25 +4,23 @@ import matplotlib.pyplot as plt
 
 frequency, impedance, phase = [], [], []
 
-ser = serial.Serial('/dev/ttyACM0', 230400, timeout = 1)
-step_size = 1000
-try:
-    for i in range(100):
-        ser.write(f"{i*1000}\n".encode('utf-8'))
-        ser.flush()
+def get_reading(frequency):
+    ser = serial.Serial('/dev/ttyACM0', 230400, timeout = 1)
+    ser.write(f"{frequency}\n".encode('utf-8'))
+    ser.flush()
+    try:
         data = ser.readline().decode('utf-8').strip()
         try:
             a, b = data.split(', ')
             tempa = float(a)
             tempb = float(b)
-            impedance.append(tempa)
-            phase.append(tempb)
+            impedance = tempa
+            phase = tempb
         except:
             pass
-        frequency.append(i)
-finally:
-    ser.close()
-
+    finally:
+        ser.close()
+    return impedance, phase
 
 
 q25_imp, q75_imp = np.percentile(impedance, (25, 75))
@@ -55,7 +53,6 @@ fig2.grid(True, which="both", ls="--")
 
 plt.tight_layout()
 plt.show()
-
 
 
     
