@@ -5,51 +5,26 @@ import matplotlib.pyplot as plt
 frequency, impedance, phase = [], [], []
 
 ser = serial.Serial('/dev/ttyACM0', 230400, timeout = 1)
-
-start_frequency = 30000
-stop_frequency = 30000
-excitation_frequency = 50000
-sweep = 0
-log_sweep = 0
-
-ser.write(f"{start_frequency}\n".encode('utf-8'))
-ser.flush()
-
-ser.write(f"{stop_frequency}\n".encode('utf-8'))
-ser.flush()
-
-ser.write(f"{excitation_frequency}\n".encode('utf-8'))
-ser.flush()
-
-ser.write(f"{sweep}\n".encode('utf-8'))
-ser.flush()
-
-ser.write(f"{log_sweep}\n".encode('utf-8'))
-ser.flush()
-
-
+step_size = 1000
 try:
-    while True:
+    for i in range(100):
+        ser.write(f"{i*1000}\n".encode('utf-8'))
+        ser.flush()
         data = ser.readline().decode('utf-8').strip()
-        if data == "Done":
-            ser.close()
-            break
         try:
-            a, b, c = data.split(', ')
+            a, b = data.split(', ')
             tempa = float(a)
             tempb = float(b)
-            tempc = float(c)
-            frequency.append(tempa)
-            impedance.append(tempb)
-            phase.append(tempc)
+            impedance.append(tempa)
+            phase.append(tempb)
         except:
             pass
+        frequency.append(i)
 finally:
     ser.close()
 
-print(impedance, phase)
 
-'''
+
 q25_imp, q75_imp = np.percentile(impedance, (25, 75))
 iqr_imp = q25_imp - q75_imp
 imp_lower_bound = q25_imp - (iqr_imp * 1.5)
@@ -83,9 +58,7 @@ plt.show()
 
 
 
-        
-            
-'''
+    
 
 
 
