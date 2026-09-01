@@ -128,17 +128,11 @@ void AD5940_Main(void)
     /* Check if interrupt flag which will be set when interrupt occurred. */
     if(AD5940_GetMCUIntFlag())
     {
-      IntCount++;
       AD5940_ClrMCUIntFlag(); /* Clear this flag */
       temp = APPBUFF_SIZE;
       AppBIAISR(AppBuff, &temp); /* Deal with it and provide a buffer to store data we got */
       BIAShowResult(AppBuff, temp); /* Show the results to UART */
 
-      if(IntCount == 240)
-      {
-        IntCount = 0;
-        //AppBIACtrl(BIACTRL_SHUTDOWN, 0);
-      }
     }
     count++;
     if(count > 1000000)

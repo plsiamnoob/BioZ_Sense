@@ -611,41 +611,6 @@ AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount)
   return 0;
 }
 
-
-AD5940Err AppBIAMeasureSingle(uint32_t *pBuffer, uint32_t BufferSize, float targetFreq, float* impedance, float* phase)
-{
-  uint32_t buffer[4]; /* Buffer for 4 FIFO words (Volt/Curr Real/Imag) */
-  uint32_t count = 4;
-
-  AppBIAInit(pBuffer, BufferSize);
-  /* 1. Disable sweep & set target frequency */
-  AppBIACfg.SweepCfg.SweepEn = bFALSE; /* Prevents AppBIADataProcess from advancing sweep state */
-  AppBIACfg.SinFreq = targetFreq;
-  AppBIACfg.FreqofData = targetFreq;
-
-  AD5940_WGFreqCtrlS(targetFreq, AppBIACfg.SysClkFreq);
-
-  /* 2. Wake AFE and trigger measurement sequence */
-  AD5940_WakeUp(10);
-  AD5940_SEQMmrTrig(AppBIACfg.MeasureSeqInfo.SeqId);
-
-  /* 3. Poll for FIFO threshold flag */
-  uint32_t timeout = 100000;
-  while ((AD5940_INTCTestFlag(AFEINTC_0, AFEINTSRC_DATAFIFOTHRESH) == bFALSE) && --timeout);
-  if (timeout == 0) return AD5940ERR_TIMEOUT;
-
-  /* 4. Run ISR (Reads FIFO, sign-extends 18-bit data, and calls AppBIADataProcess) */
-  AppBIAISR(buffer, &count);
-  if(count == 0){
-    return AD5940ERR_ERROR;
-  }
-  /* 5. Extract calibrated result (buffer was cast and converted in-place) */
-    fImpPol_Type *pPol = (fImpPol_Type *)buffer;
-    *impedance = pPol->Magnitude;
-    *phase = pPol->Phase;
-
-  return AD5940ERR_OK;
-}
 /**
  * @}
  */
