@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__GUI_App_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\tecse\OneDrive\Documents\GitHub\BioZ_Sense -BC:\Users\tecse\OneDrive\Documents\GitHub\BioZ_Sense\build\gui
+  command = C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\Users\tecse\Documents\GitHub\BioZ_Sense -BC:\Users\tecse\Documents\GitHub\BioZ_Sense\build\gui
   description = Re-running CMake...
   generator = 1
 
@@ -51,7 +51,7 @@ rule RERUN_CMAKE
 # Rule for cleaning additional files.
 
 rule CLEAN_ADDITIONAL
-  command = "C:\Program Files\CMake\bin\cmake.exe" -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
+  command = C:\msys64\ucrt64\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
   description = Cleaning additional files...
 
 

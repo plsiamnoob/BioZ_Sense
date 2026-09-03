@@ -4,24 +4,48 @@
     // Sub-tasks
     {
       "label": "Build Firmware (ARM)",
-      "type": "shell",
-      "command": "cmake --preset firmware-arm; cmake --build --preset firmware-arm",
+      "type": "process",
+      "command": "C:\\msys64\\msys2_shell.cmd",
+      "args": [
+        "-defterm",
+        "-no-start",
+        "-ucrt64",
+        "-here",
+        "-c",
+        "cmake --preset firmware-arm && cmake --build --preset firmware-arm"
+      ],
       "group": "none"
     },
     {
       "label": "Build GUI (x86_64)",
-      "type": "shell",
-      "command": "cmake --preset gui-x86_64; cmake --build --preset gui-x86_64",
+      "type": "process",
+      "command": "C:\\msys64\\msys2_shell.cmd",
+      "args": [
+        "-defterm",
+        "-no-start",
+        "-ucrt64",
+        "-here",
+        "-c",
+        "cmake --preset gui-x86_64 && cmake --build --preset gui-x86_64"
+      ],
       "group": "none"
     },
     {
       "label": "Flash AD5940 via pyOCD",
-      "type": "shell",
-      "command": "python -m pyocd flash -t aducm3029 build/firmware/AD5940_Files/firmware.elf",
+      "type": "process",
+      "command": "C:\\msys64\\msys2_shell.cmd",
+      "args": [
+        "-defterm",
+        "-no-start",
+        "-ucrt64",
+        "-here",
+        "-c",
+        "python -m pyocd flash -t aducm3029 build/firmware/AD5940_Files/firmware.elf"
+      ],
       "group": "none"
     },
 
-    // User Workflows
+    // Workflows
     {
       "label": "Build All & Flash Firmware",
       "dependsOn": [

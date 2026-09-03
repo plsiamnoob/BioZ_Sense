@@ -1,5 +1,5 @@
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
-  C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
+C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
+  C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_locale.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
@@ -488,12 +488,6 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsglobal.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qwidget.h \
   C:/msys64/ucrt64/include/sched.h \
-  C:/msys64/ucrt64/include/sec_api/stdio_s.h \
-  C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
-  C:/msys64/ucrt64/include/sec_api/string_s.h \
-  C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
-  C:/msys64/ucrt64/include/sec_api/wchar_s.h \
-  C:/msys64/ucrt64/include/sec_api/wconio_s.h \
   C:/msys64/ucrt64/include/signal.h \
   C:/msys64/ucrt64/include/stdarg.h \
   C:/msys64/ucrt64/include/stddef.h \

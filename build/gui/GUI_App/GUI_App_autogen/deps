@@ -1,25 +1,9 @@
 GUI_App_autogen/timestamp: \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CMakeFindDependencyMacro.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CheckCSourceCompiles.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CheckCXXCompilerFlag.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CheckCXXSourceCompiles.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CheckIncludeFile.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/CheckLibraryExists.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/FindPackageHandleStandardArgs.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/FindPackageMessage.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/FindThreads.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/FindVulkan.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/GNUInstallDirs.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/Internal/CheckCommon.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/Internal/CheckCompilerFlag.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/Internal/CheckFlagCommonConfig.cmake \
-	C:/Program\ Files/CMake/share/cmake-4.4/Modules/Internal/CheckSourceCompiles.cmake \
-	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/CMakeLists.txt \
-	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/main.cpp \
-	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.cpp \
-	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
-	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
+	C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App/CMakeLists.txt \
+	C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App/main.cpp \
+	C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.cpp \
+	C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
+	C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
 	C:/msys64/ucrt64/include/_mingw.h \
 	C:/msys64/ucrt64/include/_mingw_locale.h \
 	C:/msys64/ucrt64/include/_mingw_mac.h \
@@ -508,12 +492,6 @@ GUI_App_autogen/timestamp: \
 	C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsglobal.h \
 	C:/msys64/ucrt64/include/qt6/QtWidgets/qwidget.h \
 	C:/msys64/ucrt64/include/sched.h \
-	C:/msys64/ucrt64/include/sec_api/stdio_s.h \
-	C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
-	C:/msys64/ucrt64/include/sec_api/string_s.h \
-	C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
-	C:/msys64/ucrt64/include/sec_api/wchar_s.h \
-	C:/msys64/ucrt64/include/sec_api/wconio_s.h \
 	C:/msys64/ucrt64/include/signal.h \
 	C:/msys64/ucrt64/include/stdarg.h \
 	C:/msys64/ucrt64/include/stddef.h \
@@ -632,21 +610,11 @@ GUI_App_autogen/timestamp: \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QGifPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICNSPluginTargetsPrecheck.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QICOPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJp2PluginTargetsPrecheck.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake \
@@ -657,21 +625,11 @@ GUI_App_autogen/timestamp: \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QMngPluginTargetsPrecheck.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QPdfPluginTargetsPrecheck.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake \
@@ -682,36 +640,11 @@ GUI_App_autogen/timestamp: \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QSvgPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTgaPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTiffPluginTargetsPrecheck.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargetsPrecheck.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-relwithdebinfo.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake \
-	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWebpPluginTargetsPrecheck.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginAdditionalTargetInfo.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginConfig.cmake \
 	C:/msys64/ucrt64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets-relwithdebinfo.cmake \
@@ -785,4 +718,20 @@ GUI_App_autogen/timestamp: \
 	C:/msys64/ucrt64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
 	C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/mm_malloc.h \
 	C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdbool.h \
-	C:/Program\ Files/CMake/bin/cmake.exe
+	C:/msys64/ucrt64/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/CMakeFindDependencyMacro.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/CheckCSourceCompiles.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/CheckCXXCompilerFlag.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/CheckCXXSourceCompiles.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/CheckIncludeFile.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/CheckLibraryExists.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/FindThreads.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/FindVulkan.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/GNUInstallDirs.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/Internal/CheckCommon.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/Internal/CheckCompilerFlag.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake \
+	C:/msys64/ucrt64/share/cmake/Modules/Internal/CheckSourceCompiles.cmake \
+	C:/msys64/ucrt64/bin/cmake.exe

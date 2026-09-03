@@ -1,5 +1,22 @@
 {
     "python.terminal.activateEnvironment": false,
-    "cmake.sourceDirectory": "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense",
-    "cmake.cmakePath": "C:/msys64/ucrt64/bin/cmake.exe",
+    "cmake.sourceDirectory": "C:/Users/tecse/Documents/GitHub/BioZ_Sense",
+    
+  "cmake.cmakePath": "C:/msys64/ucrt64/bin/cmake.exe",
+  "cmake.generator": "Ninja",
+"terminal.integrated.profiles.windows": {
+    "MSYS2 UCRT64": {
+      "path": "C:\\msys64\\usr\\bin\\bash.exe",
+      "args": [
+        "--login",
+        "-i"
+      ],
+      "env": {
+        "MSYSTEM": "UCRT64",
+        "CHERE_INVOKING": "1"
+      }
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "MSYS2 UCRT64"
+
 }

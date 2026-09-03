@@ -1,3 +1,0 @@
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/CMakeFiles/cmsis_core-populate.dir
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/_deps/cmsis_core-subbuild/CMakeFiles/rebuild_cache.dir

@@ -72,26 +72,52 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // Plotting setup
     impSeries = new QScatterSeries();
     phaseSeries = new QScatterSeries();
-    connect(impSeries, &QScatterSeries::hovered, this, [](const QPointF &point, bool state) {
-            if (state) { // Mouse entered the point
-                QString text = QString("Time: %1 s\nImpedance: %2 Ω")
-                                .arg(point.x(), 0, 'f', 3)  // 3 decimal places for time
-                                .arg(point.y(), 0, 'f', 2); // 2 decimal places for impedance
-                QToolTip::showText(QCursor::pos(), text);
-            } else { // Mouse left the point
-                QToolTip::hideText();
-            }
-        });
-connect(phaseSeries, &QScatterSeries::hovered, this, [](const QPointF &point, bool state) {
-        if (state) { // Mouse entered the point
-            QString text = QString("Time: %1 s\nPhase: %2°")
-                               .arg(point.x(), 0, 'f', 3)
-                               .arg(point.y(), 0, 'f', 2);
+connect(impSeries, &QScatterSeries::hovered, this, [this](const QPointF &point, bool state) {
+    if (state) {
+        // Find point index in the series
+        int index = impSeries->points().indexOf(point);
+
+        if (index >= 0 && index < measurementsDisplayed.size()) {
+            const Measurement &m = measurementsDisplayed.at(index);
+
+            QString text = QString("Time: %1 s\n"
+                                   "Impedance: %2 Ω\n"
+                                   "Phase: %3°\n"
+                                   "Freq: %4 Hz")
+                               .arg(m.timestamp, 0, 'f', 3)
+                               .arg(m.impedance, 0, 'f', 2)
+                               .arg(m.phase, 0, 'f', 2)
+                               .arg(m.frequency, 0, 'f', 1);
+
             QToolTip::showText(QCursor::pos(), text);
-        } else { // Mouse left the point
-            QToolTip::hideText();
         }
-    });
+    } else {
+        QToolTip::hideText();
+    }
+});
+connect(phaseSeries, &QScatterSeries::hovered, this, [this](const QPointF &point, bool state) {
+    if (state) {
+        // Find point index in the series
+        int index = phaseSeries->points().indexOf(point);
+
+        if (index >= 0 && index < measurementsDisplayed.size()) {
+            const Measurement &m = measurementsDisplayed.at(index);
+
+            QString text = QString("Time: %1 s\n"
+                                   "Impedance: %2 Ω\n"
+                                   "Phase: %3°\n"
+                                   "Freq: %4 Hz")
+                               .arg(m.timestamp, 0, 'f', 3)
+                               .arg(m.impedance, 0, 'f', 2)
+                               .arg(m.phase, 0, 'f', 2)
+                               .arg(m.frequency, 0, 'f', 1);
+
+            QToolTip::showText(QCursor::pos(), text);
+        }
+    } else {
+        QToolTip::hideText();
+    }
+});
     impChart = new QChart();
     phaseChart = new QChart();
     impChart->addSeries(impSeries);
@@ -135,9 +161,10 @@ connect(phaseSeries, &QScatterSeries::hovered, this, [](const QPointF &point, bo
     connect(sweepModeBox, QOverload<int>::of(&QComboBox::currentIndexChanged), sweepParamsWidget, &QStackedWidget::setCurrentIndex);
     connect(refreshButton, &QPushButton::clicked, this, &MainWindow::populateSerialPorts);
     connect(portComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MainWindow::onPortSelected);
-    connect(sendButton, &QPushButton::clicked, this, &MainWindow::startSweep);
     connect(serialPort, &QSerialPort::readyRead, this, &MainWindow::readData);
-        connect(clearButton, &QPushButton::clicked, this, &MainWindow::clearGraphs);
+    connect(clearButton, &QPushButton::clicked, this, &MainWindow::clearGraphs);
+    connect(sendButton, &QPushButton::clicked, this, &MainWindow::onStartSweepClicked); // Connect to new slot
+
     serialPollTimer = new QTimer(this);
     connect(serialPollTimer, &QTimer::timeout, this, &MainWindow::readData);
     serialPollTimer->start(10); // Poll every 10 milliseconds
@@ -245,7 +272,7 @@ void MainWindow::clearGraphs() {
     sweepQueue.clear();
     measurementsPending.clear();
     measurementsDisplayed.clear();
-
+    accumulatedTime = 0;
     // Clear chart series
     impSeries->clear();
     phaseSeries->clear();
@@ -270,8 +297,36 @@ void MainWindow::clearGraphs() {
     timer.restart();
 }
 
+void MainWindow::stopSweep(){
+
+    qDebug() << "Stopping Sweep.";
+    isSweepActive = false;
+
+    // Halt your hardware/timer sweep logic here
+    // sweepTimer->stop();
+
+    // Reset button visual state
+    sendButton->setText("Start Sweep");
+    sendButton->setStyleSheet(""); // Reset to default application style
+    sweepQueue.clear(); // Clear any remaining frequencies
+}
+void MainWindow::onStartSweepClicked()
+{
+    if (!isSweepActive) {
+        startSweep();
+    }else{
+        stopSweep();
+    }
+
+
+}
+
 void MainWindow::startSweep() {
     if (!serialPort->isOpen()) return;
+    
+    // Update button visual state
+    sendButton->setText("Stop Sweep");
+    sendButton->setStyleSheet("QPushButton { background-color: #d32f2f; color: white; }"); // Red highlight for stop
 
     // FIX FOR INSTANT COMPLETION: Clear stale data before starting!
     serialPort->clear();
@@ -316,8 +371,8 @@ void MainWindow::startSweep() {
 
 void MainWindow::sendNextSweepPoint() {
     if (sweepQueue.isEmpty()) {
-        qDebug() << "Sweep Complete.";
-        isSweepActive = false; // Freeze the clock!
+        qDebug() << "Sweep complete.";
+        stopSweep();
         return;
     }
     qint64 currentTime = timer.elapsed();
@@ -338,6 +393,7 @@ void MainWindow::sendNextSweepPoint() {
     QString payload = QString::number(freq) + "\n";
     serialPort->write(payload.toUtf8());
     serialPort->flush();
+
 }
 void MainWindow::readData() {
     while (serialPort->canReadLine()) {
@@ -357,9 +413,9 @@ void MainWindow::readData() {
                 measurementsPending.removeFirst(); 
                 
                 // Keep the sweep moving
-                if (!sweepQueue.isEmpty()) {
+               
                     sendNextSweepPoint();
-                }
+                
                 continue; // Skip graphing this point
             }
             
@@ -370,9 +426,9 @@ void MainWindow::readData() {
             measurementsDisplayed.push_back(first);
             updatePlots();
 
-            if (!sweepQueue.isEmpty()) {
+            
                 sendNextSweepPoint();
-            }
+            
         }
     }
 }

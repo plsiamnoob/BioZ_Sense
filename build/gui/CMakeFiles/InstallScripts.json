@@ -1,8 +1,8 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/cmake_install.cmake",
-		"C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/cmake_install.cmake"
+		"C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/cmake_install.cmake",
+		"C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

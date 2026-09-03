@@ -1,5 +1,0 @@
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/CMakeFiles/edit_cache.dir
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/CMakeFiles/rebuild_cache.dir
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/AD5940_Files/CMakeFiles/firmware.elf.dir
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/AD5940_Files/CMakeFiles/edit_cache.dir
-C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/firmware/AD5940_Files/CMakeFiles/rebuild_cache.dir

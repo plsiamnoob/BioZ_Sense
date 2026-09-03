@@ -39,13 +39,16 @@ private slots:
     void sendNextSweepPoint();  // Handles the queue
     void updateLinearMaxLabel(); // New slot
     void clearGraphs(); 
+    void onStartSweepClicked();
+    
 private:
+    void stopSweep();
     void updatePlots();
     QTimer *serialPollTimer; // Replaces readyRead
 
     QSerialPort *serialPort;
     QElapsedTimer timer;
-double accumulatedTime = 0.0; 
+    double accumulatedTime = 0.0; 
     qint64 lastTime = 0;         // <-- Use qint64 for exact timer matching
     bool isSweepActive = false;  // <-- Simple flag to control the clock
     // ...
