@@ -1,14 +1,10 @@
 #include <QApplication>
 #include "mainwindow.h"
-
+#include <iostream>
 int main(int argc, char *argv[]) {
-    // Initialize the Qt environment and event loop
-    QApplication a(argc, argv);
     
-    // Instantiate and display your main window
+    QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    
-    // Hand control over to Qt's event loop
     return a.exec();
 }

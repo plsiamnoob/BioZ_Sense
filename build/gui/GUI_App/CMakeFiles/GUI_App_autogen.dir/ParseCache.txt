@@ -4,6 +4,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h
  mdp:C:/msys64/ucrt64/include/_mingw.h
+ mdp:C:/msys64/ucrt64/include/_mingw_locale.h
  mdp:C:/msys64/ucrt64/include/_mingw_mac.h
  mdp:C:/msys64/ucrt64/include/_mingw_off_t.h
  mdp:C:/msys64/ucrt64/include/_mingw_secapi.h
@@ -11,193 +12,200 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/_mingw_stdarg.h
  mdp:C:/msys64/ucrt64/include/_timeval.h
  mdp:C:/msys64/ucrt64/include/assert.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/algorithm
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/array
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/atomic
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/backward/auto_ptr.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/backward/binders.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bit
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/algorithmfwd.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/align.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/alloc_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/allocated_ptr.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/allocator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/atomic_base.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/atomic_lockfree_defines.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/basic_string.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/basic_string.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/char_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/charconv.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/chrono.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/concept_check.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/cpp_type_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/cxxabi_forced.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/cxxabi_init_exception.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/enable_special_members.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/erase_if.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/exception.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/exception_defines.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/exception_ptr.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/functexcept.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/functional_hash.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/hash_bytes.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/hashtable.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/hashtable_policy.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/invoke.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/ios_base.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/list.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/locale_classes.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/locale_classes.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/localefwd.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/memory_resource.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/memoryfwd.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/move.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/nested_exception.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/new_allocator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/new_except.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/new_throw.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/node_handle.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/ostream_insert.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/parse_numbers.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/postypes.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/predefined_ops.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/ptr_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/range_access.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/refwrap.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/requires_hosted.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/shared_ptr.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/shared_ptr_atomic.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/shared_ptr_base.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/specfun.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/std_abs.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/std_function.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stdexcept_except.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stdexcept_throw.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stdexcept_throwfwd.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_algo.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_algobase.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_bvector.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_construct.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_function.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_heap.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_iterator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_iterator_base_funcs.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_iterator_base_types.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_list.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_map.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_multimap.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_multiset.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_numeric.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_pair.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_raw_storage_iter.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_relops.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_set.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_tempbuf.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_tree.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_uninitialized.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_vector.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stream_iterator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/streambuf.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/streambuf_iterator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/string_view.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/stringfwd.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/uniform_int_dist.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/unique_ptr.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/unordered_map.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/unordered_set.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/uses_allocator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/uses_allocator_args.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/utility.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/vector.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/bits/version.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cassert
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cctype
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cerrno
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/chrono
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/climits
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/clocale
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cmath
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/compare
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/concepts
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cstddef
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cstdint
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cstdio
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cstdlib
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cstring
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ctime
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/cwchar
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/debug/assertions.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/debug/debug.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/exception
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/experimental/source_location
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/aligned_buffer.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/alloc_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/atomicity.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/concurrence.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/numeric_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/string_conversions.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ext/type_traits.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/functional
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/initializer_list
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/iosfwd
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/iterator
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/limits
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/list
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/map
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/memory
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/new
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/numeric
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/optional
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/pstl/execution_defs.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/pstl/glue_numeric_defs.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/pstl/pstl_config.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/ratio
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/set
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/stdexcept
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/streambuf
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/string
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/string_view
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/system_error
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/bessel_function.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/beta_function.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/ell_integral.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/exp_integral.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/gamma.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/hypergeometric.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/legendre_function.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/modified_bessel_func.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/poly_hermite.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/poly_laguerre.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/riemann_zeta.tcc
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tr1/special_function_util.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/tuple
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/type_traits
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/typeinfo
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/unordered_map
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/unordered_set
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/utility
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/variant
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/vector
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/version
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/atomic_word.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++allocator.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++config.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++locale.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/cpu_defines.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/error_constants.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/gthr-default.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/gthr.h
- mdp:C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/os_defines.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/algorithm
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/array
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/atomic
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/backward/auto_ptr.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/backward/binders.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bit
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/algorithmfwd.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/align.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/alloc_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/allocated_ptr.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/allocator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/atomic_base.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/atomic_lockfree_defines.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/basic_string.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/basic_string.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/char_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/charconv.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/chrono.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/concept_check.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/cpp_type_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/cxxabi_forced.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/cxxabi_init_exception.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/enable_special_members.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/erase_if.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/exception.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/exception_defines.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/exception_ptr.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/functexcept.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/functional_hash.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/hash_bytes.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/hashtable.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/hashtable_policy.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/invoke.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/ios_base.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/list.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/locale_classes.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/locale_classes.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/localefwd.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/memory_resource.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/memoryfwd.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/move.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/nested_exception.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/new_allocator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/new_except.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/new_throw.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/node_handle.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/ostream_insert.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/parse_numbers.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/postypes.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/predefined_ops.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/ptr_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/range_access.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/refwrap.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/requires_hosted.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/shared_ptr.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/shared_ptr_atomic.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/shared_ptr_base.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/specfun.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/std_abs.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/std_function.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stdexcept_except.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stdexcept_throw.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stdexcept_throwfwd.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_algo.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_algobase.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_bvector.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_construct.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_function.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_heap.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_iterator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_iterator_base_funcs.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_iterator_base_types.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_list.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_map.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_multimap.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_multiset.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_numeric.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_pair.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_raw_storage_iter.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_relops.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_set.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_tempbuf.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_tree.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_uninitialized.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stream_iterator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/streambuf.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/streambuf_iterator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/string_view.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/stringfwd.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/uniform_int_dist.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/unique_ptr.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/unordered_map.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/unordered_set.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/uses_allocator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/uses_allocator_args.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/utility.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/vector.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/bits/version.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cassert
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cctype
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cerrno
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/chrono
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/climits
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/clocale
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cmath
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/compare
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/concepts
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cstddef
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cstdint
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cstdio
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cstdlib
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cstring
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ctime
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/cwchar
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/debug/assertions.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/debug/debug.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/exception
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/experimental/source_location
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/aligned_buffer.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/alloc_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/atomicity.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/concurrence.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/numeric_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/string_conversions.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ext/type_traits.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/functional
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/initializer_list
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/iosfwd
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/iterator
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/limits
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/list
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/map
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/memory
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/new
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/numeric
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/optional
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/pstl/execution_defs.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/pstl/glue_numeric_defs.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/pstl/pstl_config.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/ratio
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/set
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/stdexcept
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/streambuf
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/string
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/string_view
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/system_error
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/bessel_function.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/beta_function.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/ell_integral.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/exp_integral.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/gamma.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/hypergeometric.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/legendre_function.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/modified_bessel_func.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/poly_hermite.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/poly_laguerre.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/riemann_zeta.tcc
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tr1/special_function_util.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/tuple
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/type_traits
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/typeinfo
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/unordered_map
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/unordered_set
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/utility
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/variant
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/vector
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/version
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/atomic_word.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++allocator.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++config.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++locale.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/error_constants.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/gthr-default.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/gthr.h
+ mdp:C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/os_defines.h
  mdp:C:/msys64/ucrt64/include/corecrt.h
  mdp:C:/msys64/ucrt64/include/corecrt_memory.h
  mdp:C:/msys64/ucrt64/include/corecrt_startup.h
  mdp:C:/msys64/ucrt64/include/corecrt_stdio_config.h
  mdp:C:/msys64/ucrt64/include/corecrt_wconio.h
  mdp:C:/msys64/ucrt64/include/corecrt_wctype.h
+ mdp:C:/msys64/ucrt64/include/corecrt_wdirect.h
+ mdp:C:/msys64/ucrt64/include/corecrt_wio.h
+ mdp:C:/msys64/ucrt64/include/corecrt_wprocess.h
+ mdp:C:/msys64/ucrt64/include/corecrt_wstdio.h
  mdp:C:/msys64/ucrt64/include/corecrt_wstdlib.h
+ mdp:C:/msys64/ucrt64/include/corecrt_wstring.h
+ mdp:C:/msys64/ucrt64/include/corecrt_wtime.h
  mdp:C:/msys64/ucrt64/include/crtdefs.h
  mdp:C:/msys64/ucrt64/include/ctype.h
  mdp:C:/msys64/ucrt64/include/errno.h
+ mdp:C:/msys64/ucrt64/include/io.h
  mdp:C:/msys64/ucrt64/include/limits.h
  mdp:C:/msys64/ucrt64/include/locale.h
  mdp:C:/msys64/ucrt64/include/malloc.h
@@ -224,12 +232,15 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCharts/qtcharts-config.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCharts/qtchartsexports.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCharts/qxyseries.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/QElapsedTimer
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QList
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QMargins
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QObject
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/QQueue
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QRect
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QSize
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QSizeF
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/QTimer
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/QVariant
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/q17memory.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/q20bit.h
@@ -241,6 +252,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/q23type_traits.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/q23utility.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qabstracteventdispatcher.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/qabstractitemmodel.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qalgorithms.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qalloc.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qanystringview.h
@@ -276,6 +288,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qdatastream.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qdeadlinetimer.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qdebug.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/qelapsedtimer.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qendian.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qeventloop.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qexceptionhandling.h
@@ -318,6 +331,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qprocessordetection.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qproperty.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qpropertyprivate.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/qqueue.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qrect.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qrefcount.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qregularexpression.h
@@ -356,6 +370,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtenvironmentvariables.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtextstream.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtformat_impl.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtimer.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtmetamacros.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtnoop.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qtpreprocessorsupport.h
@@ -374,6 +389,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qxptype_traits.h
  mdp:C:/msys64/ucrt64/include/qt6/QtCore/qyieldcpu.h
  mdp:C:/msys64/ucrt64/include/qt6/QtGui/QBrush
+ mdp:C:/msys64/ucrt64/include/qt6/QtGui/QCursor
  mdp:C:/msys64/ucrt64/include/qt6/QtGui/QFont
  mdp:C:/msys64/ucrt64/include/qt6/QtGui/QImage
  mdp:C:/msys64/ucrt64/include/qt6/QtGui/QPen
@@ -423,31 +439,53 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs.h
  mdp:C:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs_win.h
  mdp:C:/msys64/ucrt64/include/qt6/QtSerialPort/QSerialPort
+ mdp:C:/msys64/ucrt64/include/qt6/QtSerialPort/QSerialPortInfo
  mdp:C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialport.h
  mdp:C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialportglobal.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialportinfo.h
  mdp:C:/msys64/ucrt64/include/qt6/QtSerialPort/qtserialportexports.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QComboBox
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QDoubleSpinBox
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QGraphicsView
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QGraphicsWidget
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QHBoxLayout
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QLabel
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QMainWindow
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QPushButton
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QSpinBox
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QStackedWidget
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QToolTip
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/QVBoxLayout
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractbutton.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractitemdelegate.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractscrollarea.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractslider.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractspinbox.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qboxlayout.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qcombobox.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qframe.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsitem.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicslayoutitem.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsscene.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsview.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicswidget.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qgridlayout.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qlabel.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qlayout.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qlayoutitem.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qmainwindow.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qpushbutton.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qrubberband.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qscrollarea.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qsizepolicy.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qslider.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qspinbox.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qstackedwidget.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qstyle.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qstyleoption.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qtabbar.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qtabwidget.h
+ mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qtooltip.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgets-config.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsexports.h
  mdp:C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsglobal.h
@@ -467,12 +505,13 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h
  mdp:C:/msys64/ucrt64/include/stdlib.h
  mdp:C:/msys64/ucrt64/include/string.h
  mdp:C:/msys64/ucrt64/include/swprintf.inl
+ mdp:C:/msys64/ucrt64/include/sys/stat.h
  mdp:C:/msys64/ucrt64/include/sys/timeb.h
  mdp:C:/msys64/ucrt64/include/sys/types.h
  mdp:C:/msys64/ucrt64/include/time.h
  mdp:C:/msys64/ucrt64/include/vadefs.h
  mdp:C:/msys64/ucrt64/include/wchar.h
- mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/mm_malloc.h
- mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stdbool.h
+ mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/mm_malloc.h
+ mdp:C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdbool.h
 C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/main.cpp
 C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.cpp

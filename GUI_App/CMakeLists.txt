@@ -15,12 +15,17 @@ find_package(Qt6 REQUIRED COMPONENTS
     Charts
 )
 
+
 # Define your executable target
 add_executable(GUI_App
     main.cpp
     mainwindow.cpp
     mainwindow.h
 )
+
+if(MINGW OR MSYS)
+    target_link_options(GUI_App PRIVATE -static-libgcc -static-libstdc++)
+endif()
 
 # Link the Qt6 modules
 target_link_libraries(GUI_App PRIVATE

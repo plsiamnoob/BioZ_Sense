@@ -1,6 +1,7 @@
 C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
   C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
   C:/msys64/ucrt64/include/_mingw.h \
+  C:/msys64/ucrt64/include/_mingw_locale.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
   C:/msys64/ucrt64/include/_mingw_off_t.h \
   C:/msys64/ucrt64/include/_mingw_secapi.h \
@@ -8,193 +9,200 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/_mingw_stdarg.h \
   C:/msys64/ucrt64/include/_timeval.h \
   C:/msys64/ucrt64/include/assert.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/algorithm \
-  C:/msys64/ucrt64/include/c++/16.1.0/array \
-  C:/msys64/ucrt64/include/c++/16.1.0/atomic \
-  C:/msys64/ucrt64/include/c++/16.1.0/backward/auto_ptr.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/backward/binders.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bit \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/algorithmfwd.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/align.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/alloc_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/allocated_ptr.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/allocator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/atomic_base.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/atomic_lockfree_defines.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/basic_string.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/basic_string.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/char_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/charconv.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/chrono.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/concept_check.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/cpp_type_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/cxxabi_forced.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/cxxabi_init_exception.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/enable_special_members.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/erase_if.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/exception.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/exception_defines.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/exception_ptr.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/functexcept.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/functional_hash.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/hash_bytes.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/hashtable.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/hashtable_policy.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/invoke.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/ios_base.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/list.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/locale_classes.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/locale_classes.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/localefwd.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/memory_resource.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/memoryfwd.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/move.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/nested_exception.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/new_allocator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/new_except.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/new_throw.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/node_handle.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/ostream_insert.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/parse_numbers.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/postypes.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/predefined_ops.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/ptr_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/range_access.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/refwrap.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/requires_hosted.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/shared_ptr.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/shared_ptr_atomic.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/shared_ptr_base.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/specfun.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/std_abs.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/std_function.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stdexcept_except.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stdexcept_throw.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stdexcept_throwfwd.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_algo.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_algobase.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_bvector.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_construct.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_function.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_heap.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_iterator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_iterator_base_funcs.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_iterator_base_types.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_list.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_map.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_multimap.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_multiset.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_numeric.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_pair.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_raw_storage_iter.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_relops.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_set.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_tempbuf.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_tree.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_uninitialized.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stl_vector.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stream_iterator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/streambuf.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/streambuf_iterator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/string_view.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/stringfwd.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/uniform_int_dist.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/unique_ptr.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/unordered_map.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/unordered_set.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/uses_allocator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/uses_allocator_args.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/utility.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/vector.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/bits/version.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/cassert \
-  C:/msys64/ucrt64/include/c++/16.1.0/cctype \
-  C:/msys64/ucrt64/include/c++/16.1.0/cerrno \
-  C:/msys64/ucrt64/include/c++/16.1.0/chrono \
-  C:/msys64/ucrt64/include/c++/16.1.0/climits \
-  C:/msys64/ucrt64/include/c++/16.1.0/clocale \
-  C:/msys64/ucrt64/include/c++/16.1.0/cmath \
-  C:/msys64/ucrt64/include/c++/16.1.0/compare \
-  C:/msys64/ucrt64/include/c++/16.1.0/concepts \
-  C:/msys64/ucrt64/include/c++/16.1.0/cstddef \
-  C:/msys64/ucrt64/include/c++/16.1.0/cstdint \
-  C:/msys64/ucrt64/include/c++/16.1.0/cstdio \
-  C:/msys64/ucrt64/include/c++/16.1.0/cstdlib \
-  C:/msys64/ucrt64/include/c++/16.1.0/cstring \
-  C:/msys64/ucrt64/include/c++/16.1.0/ctime \
-  C:/msys64/ucrt64/include/c++/16.1.0/cwchar \
-  C:/msys64/ucrt64/include/c++/16.1.0/debug/assertions.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/debug/debug.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/exception \
-  C:/msys64/ucrt64/include/c++/16.1.0/experimental/source_location \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/aligned_buffer.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/alloc_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/atomicity.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/concurrence.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/numeric_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/string_conversions.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ext/type_traits.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/functional \
-  C:/msys64/ucrt64/include/c++/16.1.0/initializer_list \
-  C:/msys64/ucrt64/include/c++/16.1.0/iosfwd \
-  C:/msys64/ucrt64/include/c++/16.1.0/iterator \
-  C:/msys64/ucrt64/include/c++/16.1.0/limits \
-  C:/msys64/ucrt64/include/c++/16.1.0/list \
-  C:/msys64/ucrt64/include/c++/16.1.0/map \
-  C:/msys64/ucrt64/include/c++/16.1.0/memory \
-  C:/msys64/ucrt64/include/c++/16.1.0/new \
-  C:/msys64/ucrt64/include/c++/16.1.0/numeric \
-  C:/msys64/ucrt64/include/c++/16.1.0/optional \
-  C:/msys64/ucrt64/include/c++/16.1.0/pstl/execution_defs.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/pstl/glue_numeric_defs.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/pstl/pstl_config.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/ratio \
-  C:/msys64/ucrt64/include/c++/16.1.0/set \
-  C:/msys64/ucrt64/include/c++/16.1.0/stdexcept \
-  C:/msys64/ucrt64/include/c++/16.1.0/streambuf \
-  C:/msys64/ucrt64/include/c++/16.1.0/string \
-  C:/msys64/ucrt64/include/c++/16.1.0/string_view \
-  C:/msys64/ucrt64/include/c++/16.1.0/system_error \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/bessel_function.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/beta_function.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/ell_integral.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/exp_integral.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/gamma.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/hypergeometric.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/legendre_function.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/modified_bessel_func.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/poly_hermite.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/poly_laguerre.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/riemann_zeta.tcc \
-  C:/msys64/ucrt64/include/c++/16.1.0/tr1/special_function_util.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/tuple \
-  C:/msys64/ucrt64/include/c++/16.1.0/type_traits \
-  C:/msys64/ucrt64/include/c++/16.1.0/typeinfo \
-  C:/msys64/ucrt64/include/c++/16.1.0/unordered_map \
-  C:/msys64/ucrt64/include/c++/16.1.0/unordered_set \
-  C:/msys64/ucrt64/include/c++/16.1.0/utility \
-  C:/msys64/ucrt64/include/c++/16.1.0/variant \
-  C:/msys64/ucrt64/include/c++/16.1.0/vector \
-  C:/msys64/ucrt64/include/c++/16.1.0/version \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/atomic_word.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++config.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++locale.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/error_constants.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/gthr.h \
-  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/algorithm \
+  C:/msys64/ucrt64/include/c++/16.2.0/array \
+  C:/msys64/ucrt64/include/c++/16.2.0/atomic \
+  C:/msys64/ucrt64/include/c++/16.2.0/backward/auto_ptr.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/backward/binders.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bit \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/algorithmfwd.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/align.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/allocated_ptr.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/allocator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/atomic_base.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/atomic_lockfree_defines.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/basic_string.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/basic_string.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/char_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/charconv.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/chrono.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/concept_check.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/cpp_type_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/cxxabi_forced.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/cxxabi_init_exception.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/enable_special_members.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/erase_if.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/exception.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/exception_defines.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/exception_ptr.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/functexcept.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/functional_hash.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/hash_bytes.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/hashtable.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/hashtable_policy.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/invoke.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/ios_base.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/list.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/locale_classes.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/locale_classes.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/localefwd.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/memory_resource.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/memoryfwd.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/move.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/nested_exception.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/new_allocator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/new_except.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/new_throw.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/node_handle.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/ostream_insert.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/parse_numbers.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/postypes.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/predefined_ops.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/ptr_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/range_access.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/refwrap.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/requires_hosted.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/shared_ptr.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/shared_ptr_atomic.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/shared_ptr_base.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/specfun.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/std_abs.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/std_function.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stdexcept_except.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stdexcept_throw.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stdexcept_throwfwd.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_algo.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_algobase.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_bvector.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_construct.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_function.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_heap.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_iterator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_iterator_base_funcs.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_iterator_base_types.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_list.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_map.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_multimap.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_multiset.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_numeric.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_pair.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_raw_storage_iter.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_relops.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_set.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_tempbuf.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_tree.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_uninitialized.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stream_iterator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/streambuf.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/streambuf_iterator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/string_view.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/stringfwd.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/uniform_int_dist.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/unique_ptr.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/unordered_map.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/unordered_set.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/uses_allocator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/uses_allocator_args.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/utility.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/vector.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/bits/version.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/cassert \
+  C:/msys64/ucrt64/include/c++/16.2.0/cctype \
+  C:/msys64/ucrt64/include/c++/16.2.0/cerrno \
+  C:/msys64/ucrt64/include/c++/16.2.0/chrono \
+  C:/msys64/ucrt64/include/c++/16.2.0/climits \
+  C:/msys64/ucrt64/include/c++/16.2.0/clocale \
+  C:/msys64/ucrt64/include/c++/16.2.0/cmath \
+  C:/msys64/ucrt64/include/c++/16.2.0/compare \
+  C:/msys64/ucrt64/include/c++/16.2.0/concepts \
+  C:/msys64/ucrt64/include/c++/16.2.0/cstddef \
+  C:/msys64/ucrt64/include/c++/16.2.0/cstdint \
+  C:/msys64/ucrt64/include/c++/16.2.0/cstdio \
+  C:/msys64/ucrt64/include/c++/16.2.0/cstdlib \
+  C:/msys64/ucrt64/include/c++/16.2.0/cstring \
+  C:/msys64/ucrt64/include/c++/16.2.0/ctime \
+  C:/msys64/ucrt64/include/c++/16.2.0/cwchar \
+  C:/msys64/ucrt64/include/c++/16.2.0/debug/assertions.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/debug/debug.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/exception \
+  C:/msys64/ucrt64/include/c++/16.2.0/experimental/source_location \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/aligned_buffer.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/alloc_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/atomicity.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/concurrence.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/numeric_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/string_conversions.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ext/type_traits.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/functional \
+  C:/msys64/ucrt64/include/c++/16.2.0/initializer_list \
+  C:/msys64/ucrt64/include/c++/16.2.0/iosfwd \
+  C:/msys64/ucrt64/include/c++/16.2.0/iterator \
+  C:/msys64/ucrt64/include/c++/16.2.0/limits \
+  C:/msys64/ucrt64/include/c++/16.2.0/list \
+  C:/msys64/ucrt64/include/c++/16.2.0/map \
+  C:/msys64/ucrt64/include/c++/16.2.0/memory \
+  C:/msys64/ucrt64/include/c++/16.2.0/new \
+  C:/msys64/ucrt64/include/c++/16.2.0/numeric \
+  C:/msys64/ucrt64/include/c++/16.2.0/optional \
+  C:/msys64/ucrt64/include/c++/16.2.0/pstl/execution_defs.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/pstl/glue_numeric_defs.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/pstl/pstl_config.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/ratio \
+  C:/msys64/ucrt64/include/c++/16.2.0/set \
+  C:/msys64/ucrt64/include/c++/16.2.0/stdexcept \
+  C:/msys64/ucrt64/include/c++/16.2.0/streambuf \
+  C:/msys64/ucrt64/include/c++/16.2.0/string \
+  C:/msys64/ucrt64/include/c++/16.2.0/string_view \
+  C:/msys64/ucrt64/include/c++/16.2.0/system_error \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/bessel_function.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/beta_function.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/ell_integral.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/exp_integral.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/gamma.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/hypergeometric.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/legendre_function.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/modified_bessel_func.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/poly_hermite.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/poly_laguerre.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/riemann_zeta.tcc \
+  C:/msys64/ucrt64/include/c++/16.2.0/tr1/special_function_util.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/tuple \
+  C:/msys64/ucrt64/include/c++/16.2.0/type_traits \
+  C:/msys64/ucrt64/include/c++/16.2.0/typeinfo \
+  C:/msys64/ucrt64/include/c++/16.2.0/unordered_map \
+  C:/msys64/ucrt64/include/c++/16.2.0/unordered_set \
+  C:/msys64/ucrt64/include/c++/16.2.0/utility \
+  C:/msys64/ucrt64/include/c++/16.2.0/variant \
+  C:/msys64/ucrt64/include/c++/16.2.0/vector \
+  C:/msys64/ucrt64/include/c++/16.2.0/version \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++config.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/msys64/ucrt64/include/corecrt.h \
   C:/msys64/ucrt64/include/corecrt_memory.h \
   C:/msys64/ucrt64/include/corecrt_startup.h \
   C:/msys64/ucrt64/include/corecrt_stdio_config.h \
   C:/msys64/ucrt64/include/corecrt_wconio.h \
   C:/msys64/ucrt64/include/corecrt_wctype.h \
+  C:/msys64/ucrt64/include/corecrt_wdirect.h \
+  C:/msys64/ucrt64/include/corecrt_wio.h \
+  C:/msys64/ucrt64/include/corecrt_wprocess.h \
+  C:/msys64/ucrt64/include/corecrt_wstdio.h \
   C:/msys64/ucrt64/include/corecrt_wstdlib.h \
+  C:/msys64/ucrt64/include/corecrt_wstring.h \
+  C:/msys64/ucrt64/include/corecrt_wtime.h \
   C:/msys64/ucrt64/include/crtdefs.h \
   C:/msys64/ucrt64/include/ctype.h \
   C:/msys64/ucrt64/include/errno.h \
+  C:/msys64/ucrt64/include/io.h \
   C:/msys64/ucrt64/include/limits.h \
   C:/msys64/ucrt64/include/locale.h \
   C:/msys64/ucrt64/include/malloc.h \
@@ -221,12 +229,15 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtCharts/qtcharts-config.h \
   C:/msys64/ucrt64/include/qt6/QtCharts/qtchartsexports.h \
   C:/msys64/ucrt64/include/qt6/QtCharts/qxyseries.h \
+  C:/msys64/ucrt64/include/qt6/QtCore/QElapsedTimer \
   C:/msys64/ucrt64/include/qt6/QtCore/QList \
   C:/msys64/ucrt64/include/qt6/QtCore/QMargins \
   C:/msys64/ucrt64/include/qt6/QtCore/QObject \
+  C:/msys64/ucrt64/include/qt6/QtCore/QQueue \
   C:/msys64/ucrt64/include/qt6/QtCore/QRect \
   C:/msys64/ucrt64/include/qt6/QtCore/QSize \
   C:/msys64/ucrt64/include/qt6/QtCore/QSizeF \
+  C:/msys64/ucrt64/include/qt6/QtCore/QTimer \
   C:/msys64/ucrt64/include/qt6/QtCore/QVariant \
   C:/msys64/ucrt64/include/qt6/QtCore/q17memory.h \
   C:/msys64/ucrt64/include/qt6/QtCore/q20bit.h \
@@ -238,6 +249,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtCore/q23type_traits.h \
   C:/msys64/ucrt64/include/qt6/QtCore/q23utility.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qabstracteventdispatcher.h \
+  C:/msys64/ucrt64/include/qt6/QtCore/qabstractitemmodel.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qalgorithms.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qalloc.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qanystringview.h \
@@ -273,6 +285,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtCore/qdatastream.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qdeadlinetimer.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qdebug.h \
+  C:/msys64/ucrt64/include/qt6/QtCore/qelapsedtimer.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qendian.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qeventloop.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qexceptionhandling.h \
@@ -315,6 +328,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtCore/qprocessordetection.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qproperty.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qpropertyprivate.h \
+  C:/msys64/ucrt64/include/qt6/QtCore/qqueue.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qrect.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qrefcount.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qregularexpression.h \
@@ -353,6 +367,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtCore/qtenvironmentvariables.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qtextstream.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qtformat_impl.h \
+  C:/msys64/ucrt64/include/qt6/QtCore/qtimer.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qtmetamacros.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qtnoop.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qtpreprocessorsupport.h \
@@ -371,6 +386,7 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtCore/qxptype_traits.h \
   C:/msys64/ucrt64/include/qt6/QtCore/qyieldcpu.h \
   C:/msys64/ucrt64/include/qt6/QtGui/QBrush \
+  C:/msys64/ucrt64/include/qt6/QtGui/QCursor \
   C:/msys64/ucrt64/include/qt6/QtGui/QFont \
   C:/msys64/ucrt64/include/qt6/QtGui/QImage \
   C:/msys64/ucrt64/include/qt6/QtGui/QPen \
@@ -420,31 +436,53 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs_win.h \
   C:/msys64/ucrt64/include/qt6/QtSerialPort/QSerialPort \
+  C:/msys64/ucrt64/include/qt6/QtSerialPort/QSerialPortInfo \
   C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialport.h \
   C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialportglobal.h \
+  C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialportinfo.h \
   C:/msys64/ucrt64/include/qt6/QtSerialPort/qtserialportexports.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QComboBox \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QDoubleSpinBox \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QGraphicsView \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QGraphicsWidget \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QHBoxLayout \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QLabel \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QMainWindow \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QPushButton \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QSpinBox \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QStackedWidget \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QToolTip \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QVBoxLayout \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractbutton.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractitemdelegate.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractscrollarea.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractslider.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractspinbox.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qboxlayout.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qcombobox.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qframe.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsitem.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicslayoutitem.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsscene.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsview.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicswidget.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qgridlayout.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qlabel.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qlayout.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qlayoutitem.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qmainwindow.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qpushbutton.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qrubberband.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qscrollarea.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qsizepolicy.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qslider.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qspinbox.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qstackedwidget.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qstyle.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qstyleoption.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qtabbar.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtabwidget.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qtooltip.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgets-config.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsexports.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsglobal.h \
@@ -464,10 +502,11 @@ C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_au
   C:/msys64/ucrt64/include/stdlib.h \
   C:/msys64/ucrt64/include/string.h \
   C:/msys64/ucrt64/include/swprintf.inl \
+  C:/msys64/ucrt64/include/sys/stat.h \
   C:/msys64/ucrt64/include/sys/timeb.h \
   C:/msys64/ucrt64/include/sys/types.h \
   C:/msys64/ucrt64/include/time.h \
   C:/msys64/ucrt64/include/vadefs.h \
   C:/msys64/ucrt64/include/wchar.h \
-  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/mm_malloc.h \
-  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stdbool.h
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/mm_malloc.h \
+  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.2.0/include/stdbool.h

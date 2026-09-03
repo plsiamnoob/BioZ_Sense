@@ -40,22 +40,34 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "MainWindow",
-        "sendFrequency",
+        "populateSerialPorts",
         "",
+        "onPortSelected",
+        "index",
+        "startSweep",
         "readData",
-        "updatePlots",
-        "findAndConnectPort"
+        "sendNextSweepPoint",
+        "updateLinearMaxLabel",
+        "clearGraphs"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'sendFrequency'
+        // Slot 'populateSerialPorts'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'readData'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'updatePlots'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'findAndConnectPort'
+        // Slot 'onPortSelected'
+        QtMocHelpers::SlotData<void(int)>(3, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 4 },
+        }}),
+        // Slot 'startSweep'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'readData'
+        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'sendNextSweepPoint'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'updateLinearMaxLabel'
+        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'clearGraphs'
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -79,14 +91,16 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<MainWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->sendFrequency(); break;
-        case 1: _t->readData(); break;
-        case 2: _t->updatePlots(); break;
-        case 3: _t->findAndConnectPort(); break;
+        case 0: _t->populateSerialPorts(); break;
+        case 1: _t->onPortSelected((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->startSweep(); break;
+        case 3: _t->readData(); break;
+        case 4: _t->sendNextSweepPoint(); break;
+        case 5: _t->updateLinearMaxLabel(); break;
+        case 6: _t->clearGraphs(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const
@@ -108,14 +122,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 7;
     }
     return _id;
 }

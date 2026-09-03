@@ -1,9 +1,17 @@
 # ninja log v7
-16	602	8100094462618862	GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
-16	602	8100094462618862	GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
-16	602	8100094462618862	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
-16	602	8100094462618862	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
-617	2360	8100094463063202	GUI_App/CMakeFiles/GUI_App.dir/main.cpp.obj	695c8faaebb6e384
-611	2574	8100094463009778	GUI_App/CMakeFiles/GUI_App.dir/GUI_App_autogen/mocs_compilation.cpp.obj	76760c08bdfd03f8
-622	2791	8100094463118800	GUI_App/CMakeFiles/GUI_App.dir/mainwindow.cpp.obj	a4e552386db33110
-2792	2953	8100094484811461	GUI_App/GUI_App.exe	ec5c941a2955f16
+15	560	8101043149402490	GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
+15	560	8101043149402490	GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
+15	560	8101043149402490	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
+15	560	8101043149402490	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
+566	2441	8101043149778281	GUI_App/CMakeFiles/GUI_App.dir/main.cpp.obj	695c8faaebb6e384
+561	2435	8101043149722083	GUI_App/CMakeFiles/GUI_App.dir/GUI_App_autogen/mocs_compilation.cpp.obj	76760c08bdfd03f8
+571	2729	8101043149828773	GUI_App/CMakeFiles/GUI_App.dir/mainwindow.cpp.obj	a4e552386db33110
+2729	2905	8101043171399912	GUI_App/GUI_App.exe	d50d703197a80f10
+16	524	8101045646478574	GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
+16	524	8101045646478574	GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
+16	524	8101045646478574	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/timestamp	cc1d5eee81539359
+16	524	8101045646478574	C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/mocs_compilation.cpp	cc1d5eee81539359
+531	2357	8101045646807122	GUI_App/CMakeFiles/GUI_App.dir/main.cpp.obj	695c8faaebb6e384
+526	2371	8101045646758130	GUI_App/CMakeFiles/GUI_App.dir/GUI_App_autogen/mocs_compilation.cpp.obj	76760c08bdfd03f8
+535	2671	8101045646850910	GUI_App/CMakeFiles/GUI_App.dir/mainwindow.cpp.obj	a4e552386db33110
+2672	2847	8101045668219779	GUI_App/GUI_App.exe	d50d703197a80f10

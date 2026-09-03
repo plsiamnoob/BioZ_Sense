@@ -10,9 +10,10 @@
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}/build/gui/GUI_App",
       "environment": [
-        {
-          "value": "C:\\msys64\\ucrt64\\bin;${env:PATH}"
-        }
+          {
+              "name": "PATH",
+              "value": "C:\\msys64\\ucrt64\\bin;C:\\Windows\\system32"
+            }
       ],
       "externalConsole": false,
       "MIMode": "gdb",
@@ -20,23 +21,22 @@
       "preLaunchTask": "Build All & Flash Firmware"
     },
     {
-      "name": "Run GUI Only",
+
+      "name": "Debug GUI App",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/run.bat",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}/build/gui/GUI_App",
+      "program": "${workspaceFolder}/build/gui/GUI_App/GUI_App.exe",
+      "cwd": "${workspaceFolder}/build/gui/GUI_App/",
       "environment": [
-        {
-          "name": "PATH",
-          "value": "C:\\msys64\\ucrt64\\bin;${env:PATH}"
-        }
+          {
+              "name": "PATH",
+              "value": "C:\\msys64\\ucrt64\\bin;C:\\Windows\\system32"
+            }
       ],
-      "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
+      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
       "preLaunchTask": "Build GUI Only"
+      
     }
   ]
 }
