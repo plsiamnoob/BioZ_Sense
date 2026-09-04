@@ -32,7 +32,7 @@ AppBIACfg_Type AppBIACfg =
         .AdcClkFreq = 16000000.0,
         .BiaODR = 20.0, /* 20.0 Hz*/
         .NumOfData = -1,
-        .RcalVal = 10000.0, /* 10kOhm */
+        .RcalVal = 10000.0, /* 1820ohms, changed from 10kOhm */
 
         .PwrMod = AFEPWR_LP,
         .HstiaRtiaSel = HSTIARTIA_1K,
@@ -363,7 +363,8 @@ static AD5940Err AppBIASeqMeasureGen(void)
   return AD5940ERR_OK;
 }
 
-static AD5940Err AppBIARtiaCal(void)
+
+static AD5940Err AppBIARtiaCal()
 {
   HSRTIACal_Type hsrtia_cal;
 
@@ -493,6 +494,7 @@ AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize)
   AppBIACfg.BIAInited = bTRUE; /* BIA application has been initialized. */
   return AD5940ERR_OK;
 }
+
 
 /* Modify registers when AFE wakeup */
 

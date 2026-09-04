@@ -33,14 +33,14 @@
     {
       "label": "Flash AD5940 via pyOCD",
       "type": "process",
-      "command": "C:\\msys64\\msys2_shell.cmd",
+      "command": "python",
       "args": [
-        "-defterm",
-        "-no-start",
-        "-ucrt64",
-        "-here",
-        "-c",
-        "python -m pyocd flash -t aducm3029 build/firmware/AD5940_Files/firmware.elf"
+        "-m",
+        "pyocd",
+        "flash",
+        "-t",
+        "aducm3029",
+        "build/firmware/AD5940_Files/firmware.elf"
       ],
       "group": "none"
     },

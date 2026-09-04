@@ -88,17 +88,42 @@ void AD5940_Main_Routine(void)
 
   LocalAD5940PlatformCfg();
 
-  char freq_char[32];
+  char input_buffer[64];
+  char command[16];
+  float param_float;
   int freq;
   float measuredImpedance = -1;
   float measuredPhase = -1;
   while (1)
   {
     fflush(stdout);
-    ReadUART(freq_char, 32);
-    if (!(freq = atoi(freq_char))) freq = 15000;
-    AppBIAMeasureSingle(AppBuff, 512, freq, &measuredImpedance, &measuredPhase);  
-    printf("%f, %f \n", measuredImpedance, measuredPhase);
+    
+    // Read the incoming line over UART
+    ReadUART(input_buffer, sizeof(input_buffer));
+
+    // Parse the command and argument
+    int parsed = sscanf(input_buffer, "%15s %f", command, &param_float);
+    if (parsed > 0) 
+    {
+        // 2. Handle Single Measurement Command: "MEAS <Frequency>"
+        if (strcasecmp(command, "MEAS") == 0) 
+        {
+            freq = (parsed >= 2) ? (int)param_float : 15000;
+            
+            // Optionally update single measurement frequency if using non-sweep mode
+            AppBIAMeasureSingle(AppBuff, 512, freq, &measuredImpedance, &measuredPhase);
+            printf("DATA %f, %f\n", measuredImpedance, measuredPhase);
+        }
+        // 3. Handle Unknown Commands
+        else 
+        {
+            printf("ERR UNKNOWN_COMMAND\n");
+        }
+    }
+
+    //if (!(freq = atoi(freq_char))) freq = 15000;
+    //AppBIAMeasureSingle(AppBuff, 512, freq, &measuredImpedance, &measuredPhase);  
+    //printf("%f, %f \n", measuredImpedance, measuredPhase);
     }
   }
 

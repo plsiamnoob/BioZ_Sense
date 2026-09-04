@@ -12,60 +12,66 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     portComboBox = new QComboBox(this);
     refreshButton = new QPushButton("Refresh Ports", this);
 
+
+
+    //console 
+    consoleOutput = new QPlainTextEdit(this);
+    consoleOutput->setReadOnly(true);
+    consoleOutput->setMaximumBlockCount(1000); // Prevents infinite memory growth
+    consoleOutput->setFixedHeight(100);        // Keeps it small at the bottom
     // --- SWEEP UI SETUP ---
-    sweepModeBox = new QComboBox(this);
-    sweepModeBox->addItems({"One-Shot", "Linear Sweep", "Logarithmic Sweep"});
-    
-    sweepParamsWidget = new QStackedWidget(this);
+        sweepModeBox = new QComboBox(this);
+        sweepModeBox->addItems({"One-Shot", "Linear Sweep", "Logarithmic Sweep"});
+        
+        sweepParamsWidget = new QStackedWidget(this);
 
-    // Page 0: One-Shot
-    QWidget *oneShotWidget = new QWidget();
-    QHBoxLayout *oneShotLayout = new QHBoxLayout(oneShotWidget);
-    freqInput = new QDoubleSpinBox(); freqInput->setRange(1, 200000); freqInput->setValue(100000);
-    oneShotLayout->addWidget(new QLabel("Freq (Hz):")); oneShotLayout->addWidget(freqInput);
-    oneShotLayout->setContentsMargins(0,0,0,0);
+        // Page 0: One-Shot
+        QWidget *oneShotWidget = new QWidget();
+        QHBoxLayout *oneShotLayout = new QHBoxLayout(oneShotWidget);
+        freqInput = new QDoubleSpinBox(); freqInput->setRange(1, 200000); freqInput->setValue(100000);
+        oneShotLayout->addWidget(new QLabel("Freq (Hz):")); oneShotLayout->addWidget(freqInput);
+        oneShotLayout->setContentsMargins(0,0,0,0);
 
-    // Page 1: Linear Sweep
-    QWidget *linWidget = new QWidget();
-    QHBoxLayout *linLayout = new QHBoxLayout(linWidget);
-    linStart = new QDoubleSpinBox(); linStart->setRange(1, 200000); linStart->setValue(1000);
-    linMaxLabel = new QLabel(); // Replaces linEnd // Max boundary
-    linStep = new QDoubleSpinBox(); linStep->setRange(0.1, 200000); linStep->setValue(100);
+        // Page 1: Linear Sweep
+        QWidget *linWidget = new QWidget();
+        QHBoxLayout *linLayout = new QHBoxLayout(linWidget);
+        linStart = new QDoubleSpinBox(); linStart->setRange(1, 200000); linStart->setValue(1000);
+        linMaxLabel = new QLabel(); // Replaces linEnd // Max boundary
+        linStep = new QDoubleSpinBox(); linStep->setRange(0.1, 200000); linStep->setValue(100);
 
-    linSamples = new QSpinBox(); 
-    linSamples->setRange(2, 2000); 
-    linSamples->setValue(100);
+        linSamples = new QSpinBox(); 
+        linSamples->setRange(2, 2000); 
+        linSamples->setValue(100);
 
 
-    linLayout->addWidget(new QLabel("Start:")); linLayout->addWidget(linStart);
-    linLayout->addWidget(linStep);
-    linLayout->addWidget(new QLabel("Step:")); linLayout->addWidget(linStep);
-    linLayout->addWidget(new QLabel("Samples:")); 
-    linLayout->addWidget(linSamples);
-        linLayout->addWidget(linMaxLabel); // Add it to the layout
-    linLayout->setContentsMargins(0,0,0,0);
+        linLayout->addWidget(new QLabel("Start:")); linLayout->addWidget(linStart);
+        linLayout->addWidget(linStep);
+        linLayout->addWidget(new QLabel("Step:")); linLayout->addWidget(linStep);
+        linLayout->addWidget(new QLabel("Samples:")); 
+        linLayout->addWidget(linSamples);
+            linLayout->addWidget(linMaxLabel); // Add it to the layout
+        linLayout->setContentsMargins(0,0,0,0);
 
-    connect(linStart, &QDoubleSpinBox::valueChanged, this, &MainWindow::updateLinearMaxLabel);
-    connect(linStep, &QDoubleSpinBox::valueChanged, this, &MainWindow::updateLinearMaxLabel);
-    updateLinearMaxLabel(); // Initialize text
-    // Page 2: Logarithmic Sweep
-    QWidget *logWidget = new QWidget();
-    QHBoxLayout *logLayout = new QHBoxLayout(logWidget);
-    logStart = new QDoubleSpinBox(); logStart->setRange(1, 200000); logStart->setValue(1000);
-    logEnd = new QDoubleSpinBox(); logEnd->setRange(1, 200000); logEnd->setValue(100000);
-    logSamples = new QSpinBox(); logSamples->setRange(2, 2000); logSamples->setValue(100);
-    logLayout->addWidget(new QLabel("Start:")); logLayout->addWidget(logStart);
-    logLayout->addWidget(new QLabel("End:")); logLayout->addWidget(logEnd);
-    logLayout->addWidget(new QLabel("Samples:")); logLayout->addWidget(logSamples);
-    logLayout->setContentsMargins(0,0,0,0);
+        connect(linStart, &QDoubleSpinBox::valueChanged, this, &MainWindow::updateLinearMaxLabel);
+        connect(linStep, &QDoubleSpinBox::valueChanged, this, &MainWindow::updateLinearMaxLabel);
+        updateLinearMaxLabel(); // Initialize text
+        // Page 2: Logarithmic Sweep
+        QWidget *logWidget = new QWidget();
+        QHBoxLayout *logLayout = new QHBoxLayout(logWidget);
+        logStart = new QDoubleSpinBox(); logStart->setRange(1, 200000); logStart->setValue(1000);
+        logEnd = new QDoubleSpinBox(); logEnd->setRange(1, 200000); logEnd->setValue(100000);
+        logSamples = new QSpinBox(); logSamples->setRange(2, 2000); logSamples->setValue(100);
+        logLayout->addWidget(new QLabel("Start:")); logLayout->addWidget(logStart);
+        logLayout->addWidget(new QLabel("End:")); logLayout->addWidget(logEnd);
+        logLayout->addWidget(new QLabel("Samples:")); logLayout->addWidget(logSamples);
+        logLayout->setContentsMargins(0,0,0,0);
 
-    sweepParamsWidget->addWidget(oneShotWidget);
-    sweepParamsWidget->addWidget(linWidget);
-    sweepParamsWidget->addWidget(logWidget);
+        sweepParamsWidget->addWidget(oneShotWidget);
+        sweepParamsWidget->addWidget(linWidget);
+        sweepParamsWidget->addWidget(logWidget);
 
     sendButton = new QPushButton("Start Sweep", this);
     clearButton = new QPushButton("Clear Graphs", this); // <-- ADD THIS
-
     // ... down in the connections section ...
 
 
@@ -151,10 +157,14 @@ connect(phaseSeries, &QScatterSeries::hovered, this, [this](const QPointF &point
     inputLayout->addWidget(sendButton);
     inputLayout->addWidget(clearButton); // <-- ADD THIS
 
+
     mainLayout->addLayout(portLayout);
     mainLayout->addLayout(inputLayout);
     mainLayout->addWidget(impView);
     mainLayout->addWidget(phaseView);
+    mainLayout->addWidget(consoleOutput); // <-- Added here
+    setCentralWidget(centralWidget);
+
     setCentralWidget(centralWidget);
 
     // Connections
@@ -171,7 +181,6 @@ connect(phaseSeries, &QScatterSeries::hovered, this, [this](const QPointF &point
 
     populateSerialPorts();
 }
-
 void MainWindow::populateSerialPorts() {
     portComboBox->blockSignals(true);
     portComboBox->clear();
@@ -390,7 +399,7 @@ void MainWindow::sendNextSweepPoint() {
     m.timestamp = accumulatedTime;
     measurementsPending.push_back(m);
 
-    QString payload = QString::number(freq) + "\n";
+    QString payload = "MEAS " + QString::number(freq) + "\n";
     serialPort->write(payload.toUtf8());
     serialPort->flush();
 
@@ -398,37 +407,93 @@ void MainWindow::sendNextSweepPoint() {
 void MainWindow::readData() {
     while (serialPort->canReadLine()) {
         QString data = QString::fromUtf8(serialPort->readLine()).trimmed();
-        QStringList parts = data.split(", ");
         
-        if (parts.size() == 2 && !measurementsPending.isEmpty()) {
-            bool ok1, ok2;
-            double impedance = parts[0].toDouble(&ok1);
-            double phase = parts[1].toDouble(&ok2);
-            
-            // Validate that we successfully parsed actual, finite numbers
-            if (!ok1 || !ok2 || !std::isfinite(impedance) || !std::isfinite(phase)) {
-                qDebug() << "Ignored invalid data from board:" << data;
-                
-                // Drop this pending measurement so we don't get out of sync
-                measurementsPending.removeFirst(); 
-                
-                // Keep the sweep moving
-               
-                    sendNextSweepPoint();
-                
-                continue; // Skip graphing this point
-            }
-            
-            Measurement first = measurementsPending.takeFirst();
-            first.impedance = impedance;
-            first.phase = phase;
-            
-            measurementsDisplayed.push_back(first);
-            updatePlots();
+        if (data.isEmpty()) {
+            continue;
+        }
 
-            
+        // --- NEW: Print all incoming board data to the text box ---
+        consoleOutput->appendPlainText("Debug (Hardware Response): " + data);
+        // -------------------------------------------------
+        // -----------------------------------------------------------------
+        // 1. Handle DATA responses (e.g., "DATA 1234.56, -45.2")
+        // -----------------------------------------------------------------
+        if (data.startsWith("DATA ")) {
+            QString payload = data.mid(5).trimmed(); // Strip off "DATA "
+            QStringList parts = payload.split(",");
+
+            if (parts.size() == 2 && !measurementsPending.isEmpty()) {
+                bool ok1, ok2;
+                double impedance = parts[0].trimmed().toDouble(&ok1);
+                double phase = parts[1].trimmed().toDouble(&ok2);
+
+                // Validate that we successfully parsed actual, finite numbers
+                if (!ok1 || !ok2 || !std::isfinite(impedance) || !std::isfinite(phase)) {
+                    qDebug() << "Ignored invalid data payload from board:" << data;
+
+                    // Drop this pending measurement so we don't get out of sync
+                    measurementsPending.removeFirst(); 
+
+                    // Keep the sweep moving
+                    sendNextSweepPoint();
+                    continue; 
+                }
+
+                Measurement first = measurementsPending.takeFirst();
+                first.impedance = impedance;
+                first.phase = phase;
+
+                measurementsDisplayed.push_back(first);
+                updatePlots();
+
                 sendNextSweepPoint();
-            
+            } else {
+                qWarning() << "Received DATA but no pending measurements or invalid split:" << data;
+            }
+        }
+        // -----------------------------------------------------------------
+        // 2. Handle Acknowledgments (e.g., "ACK CAL 10000.000000")
+        // -----------------------------------------------------------------
+        else if (data.startsWith("ACK ")) {
+            qDebug() << "Hardware ACK:" << data;
+
+            if (data.startsWith("ACK CAL")) {
+                // Calibration succeeded; perform any UI updates or status updates here
+                // e.g., ui->statusLabel->setText("Calibration Complete");
+            }
+        }
+        // -----------------------------------------------------------------
+        // 3. Handle Errors (e.g., "ERR CAL_FAILED", "ERR UNKNOWN_COMMAND")
+        // -----------------------------------------------------------------
+        else if (data.startsWith("ERR ")) {
+            qWarning() << "Hardware Error received:" << data;
+
+            // Optional: If a measurement failed while sweeping, clear queue or continue
+            if (data.contains("CAL_FAILED")) {
+                // Handle calibration failure feedback in GUI
+            }
+        }
+        // -----------------------------------------------------------------
+        // 4. Fallback for Legacy Unprefixed Data (e.g., "1234.56, -45.2")
+        // -----------------------------------------------------------------
+        else {
+            QStringList parts = data.split(",");
+            if (parts.size() == 2 && !measurementsPending.isEmpty()) {
+                bool ok1, ok2;
+                double impedance = parts[0].trimmed().toDouble(&ok1);
+                double phase = parts[1].trimmed().toDouble(&ok2);
+
+                if (ok1 && ok2 && std::isfinite(impedance) && std::isfinite(phase)) {
+                    Measurement first = measurementsPending.takeFirst();
+                    first.impedance = impedance;
+                    first.phase = phase;
+
+                    measurementsDisplayed.push_back(first);
+                    updatePlots();
+
+                    sendNextSweepPoint();
+                }
+            }
         }
     }
 }

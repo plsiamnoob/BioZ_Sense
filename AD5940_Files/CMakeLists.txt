@@ -91,9 +91,9 @@ target_link_options(firmware.elf PRIVATE
     -Wl,--gc-sections
     --specs=nano.specs
     --specs=nosys.specs
-    -u _printf_float
+    -Wl,-u,_printf_float
+    -Wl,-u,_scanf_float
 )
-
 # Post-build generation of binary and hex outputs
 add_custom_command(TARGET firmware.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O ihex firmware.elf firmware.hex

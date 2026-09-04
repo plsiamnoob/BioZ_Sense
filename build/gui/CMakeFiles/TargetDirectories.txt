@@ -1,7 +1,7 @@
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/CMakeFiles/edit_cache.dir
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/CMakeFiles/rebuild_cache.dir
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/GUI_App.dir
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/edit_cache.dir
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/rebuild_cache.dir
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/GUI_App_autogen_timestamp_deps.dir
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/GUI_App_autogen.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/CMakeFiles/edit_cache.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/CMakeFiles/rebuild_cache.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/GUI_App.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/edit_cache.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/rebuild_cache.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/GUI_App_autogen_timestamp_deps.dir
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/CMakeFiles/GUI_App_autogen.dir

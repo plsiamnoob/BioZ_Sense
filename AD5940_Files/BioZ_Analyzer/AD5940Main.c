@@ -82,6 +82,7 @@ static int32_t AD5940PlatformCfg(void)
   AD5940_INTCClrFlag(AFEINTSRC_ALLINT);
   /* Step4: Reconfigure GPIO */
   gpio_cfg.FuncSet = GP6_SYNC|GP5_SYNC|GP4_SYNC|GP2_TRIG|GP1_SYNC|GP0_INT;
+  
   gpio_cfg.InputEnSet = AGPIO_Pin2;
   gpio_cfg.OutputEnSet = AGPIO_Pin0|AGPIO_Pin1|AGPIO_Pin4|AGPIO_Pin5|AGPIO_Pin6;
   gpio_cfg.OutVal = 0;
@@ -134,13 +135,7 @@ void AD5940_Main(void)
       BIAShowResult(AppBuff, temp); /* Show the results to UART */
 
     }
-    count++;
-    if(count > 1000000)
-    {
-      count = 0;
-      //AppBIAInit(0, 0);    /* Re-initialize BIA application. Because sequences are ready, no need to provide a buffer, which is used to store sequencer commands */
-      //AppBIACtrl(BIACTRL_START, 0);          /* Control BIA measurement to start. Second parameter has no meaning with this command. */
-    }
+
   }
 }
 

@@ -18,6 +18,10 @@
 #include <QToolTip>
 #include <QCursor>
 #include <cmath>
+#include <QPlainTextEdit>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QFormLayout>
 struct Measurement {
     double frequency = 0.0;
     double impedance = 0.0;
@@ -40,10 +44,10 @@ private slots:
     void updateLinearMaxLabel(); // New slot
     void clearGraphs(); 
     void onStartSweepClicked();
-    
 private:
     void stopSweep();
     void updatePlots();
+    QPlainTextEdit *consoleOutput; // Text box for board responses
     QTimer *serialPollTimer; // Replaces readyRead
 
     QSerialPort *serialPort;

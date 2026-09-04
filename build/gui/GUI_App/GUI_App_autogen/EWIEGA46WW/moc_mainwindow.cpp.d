@@ -1,5 +1,5 @@
-C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
-  C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
+C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App/mainwindow.h \
+  C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/moc_predefs.h \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_locale.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
@@ -391,6 +391,7 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtGui/QImage \
   C:/msys64/ucrt64/include/qt6/QtGui/QPen \
   C:/msys64/ucrt64/include/qt6/QtGui/QTransform \
+  C:/msys64/ucrt64/include/qt6/QtGui/qabstracttextdocumentlayout.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qaction.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qbitmap.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qbrush.h \
@@ -399,9 +400,11 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtGui/qevent.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qeventpoint.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qfont.h \
+  C:/msys64/ucrt64/include/qt6/QtGui/qfontdatabase.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qfontinfo.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qfontmetrics.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qfontvariableaxis.h \
+  C:/msys64/ucrt64/include/qt6/QtGui/qglyphrun.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qguiapplication.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qguiapplication_platform.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qicon.h \
@@ -419,12 +422,16 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtGui/qpixmap.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qpointingdevice.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qpolygon.h \
+  C:/msys64/ucrt64/include/qt6/QtGui/qrawfont.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qregion.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qrgb.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qrgba64.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qscreen.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qscreen_platform.h \
+  C:/msys64/ucrt64/include/qt6/QtGui/qtextcursor.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qtextdocument.h \
+  C:/msys64/ucrt64/include/qt6/QtGui/qtextformat.h \
+  C:/msys64/ucrt64/include/qt6/QtGui/qtextlayout.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qtextoption.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qtgui-config.h \
   C:/msys64/ucrt64/include/qt6/QtGui/qtguiexports.h \
@@ -442,12 +449,17 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtSerialPort/qserialportinfo.h \
   C:/msys64/ucrt64/include/qt6/QtSerialPort/qtserialportexports.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QComboBox \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QDialog \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QDialogButtonBox \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QDoubleSpinBox \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QFormLayout \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QGraphicsView \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QGraphicsWidget \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QHBoxLayout \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QLabel \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QLayout \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QMainWindow \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/QPlainTextEdit \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QPushButton \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QSpinBox \
   C:/msys64/ucrt64/include/qt6/QtWidgets/QStackedWidget \
@@ -460,6 +472,9 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtWidgets/qabstractspinbox.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qboxlayout.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qcombobox.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qdialog.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qdialogbuttonbox.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qformlayout.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qframe.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicsitem.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qgraphicslayoutitem.h \
@@ -471,6 +486,7 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtWidgets/qlayout.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qlayoutitem.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qmainwindow.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qplaintextedit.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qpushbutton.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qrubberband.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qscrollarea.h \
@@ -482,12 +498,19 @@ C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/GUI_App_autogen/EWI
   C:/msys64/ucrt64/include/qt6/QtWidgets/qstyleoption.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtabbar.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtabwidget.h \
+  C:/msys64/ucrt64/include/qt6/QtWidgets/qtextedit.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtooltip.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgets-config.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsexports.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qtwidgetsglobal.h \
   C:/msys64/ucrt64/include/qt6/QtWidgets/qwidget.h \
   C:/msys64/ucrt64/include/sched.h \
+  C:/msys64/ucrt64/include/sec_api/stdio_s.h \
+  C:/msys64/ucrt64/include/sec_api/stdlib_s.h \
+  C:/msys64/ucrt64/include/sec_api/string_s.h \
+  C:/msys64/ucrt64/include/sec_api/sys/timeb_s.h \
+  C:/msys64/ucrt64/include/sec_api/wchar_s.h \
+  C:/msys64/ucrt64/include/sec_api/wconio_s.h \
   C:/msys64/ucrt64/include/signal.h \
   C:/msys64/ucrt64/include/stdarg.h \
   C:/msys64/ucrt64/include/stddef.h \
