@@ -28,14 +28,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
         // Page 0: One-Shot
         QWidget *oneShotWidget = new QWidget();
         QHBoxLayout *oneShotLayout = new QHBoxLayout(oneShotWidget);
-        freqInput = new QDoubleSpinBox(); freqInput->setRange(1, 200000); freqInput->setValue(100000);
+        freqInput = new QDoubleSpinBox(); freqInput->setRange(1, 250000); freqInput->setValue(100000);
         oneShotLayout->addWidget(new QLabel("Freq (Hz):")); oneShotLayout->addWidget(freqInput);
         oneShotLayout->setContentsMargins(0,0,0,0);
 
         // Page 1: Linear Sweep
         QWidget *linWidget = new QWidget();
         QHBoxLayout *linLayout = new QHBoxLayout(linWidget);
-        linStart = new QDoubleSpinBox(); linStart->setRange(1, 200000); linStart->setValue(1000);
+        linStart = new QDoubleSpinBox(); linStart->setRange(1, 50000); linStart->setValue(1000);
         linMaxLabel = new QLabel(); // Replaces linEnd // Max boundary
         linStep = new QDoubleSpinBox(); linStep->setRange(0.1, 200000); linStep->setValue(100);
 
@@ -54,12 +54,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
         connect(linStart, &QDoubleSpinBox::valueChanged, this, &MainWindow::updateLinearMaxLabel);
         connect(linStep, &QDoubleSpinBox::valueChanged, this, &MainWindow::updateLinearMaxLabel);
+        connect(linSamples, QOverload<int>::of(&QSpinBox::valueChanged), this, &MainWindow::updateLinearMaxLabel);
         updateLinearMaxLabel(); // Initialize text
         // Page 2: Logarithmic Sweep
         QWidget *logWidget = new QWidget();
         QHBoxLayout *logLayout = new QHBoxLayout(logWidget);
-        logStart = new QDoubleSpinBox(); logStart->setRange(1, 200000); logStart->setValue(1000);
-        logEnd = new QDoubleSpinBox(); logEnd->setRange(1, 200000); logEnd->setValue(100000);
+        logStart = new QDoubleSpinBox(); logStart->setRange(1, 50000); logStart->setValue(5000);
+        logEnd = new QDoubleSpinBox(); logEnd->setRange(50000, 250000); logEnd->setValue(250000);
         logSamples = new QSpinBox(); logSamples->setRange(2, 2000); logSamples->setValue(100);
         logLayout->addWidget(new QLabel("Start:")); logLayout->addWidget(logStart);
         logLayout->addWidget(new QLabel("End:")); logLayout->addWidget(logEnd);

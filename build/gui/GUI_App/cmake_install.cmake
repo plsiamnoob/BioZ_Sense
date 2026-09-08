@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/GUI_App
+# Install script for directory: C:/Users/tecse/Documents/GitHub/BioZ_Sense/GUI_App
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/install_local_manifest.txt"
+  file(WRITE "C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense
+# Install script for directory: C:/Users/tecse/Documents/GitHub/BioZ_Sense
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/cmake_install.cmake")
+  include("C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/GUI_App/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/install_local_manifest.txt"
+  file(WRITE "C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -61,6 +61,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/tecse/OneDrive/Documents/GitHub/BioZ_Sense/build/gui/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/tecse/Documents/GitHub/BioZ_Sense/build/gui/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
