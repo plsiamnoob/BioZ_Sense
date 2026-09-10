@@ -26,6 +26,7 @@ set(DFP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/aducm3029_dfp")
 file(GLOB GCC_STARTUP "${DFP_DIR}/Source/GCC/startup_ADuCM3029.*")
 set(SYSTEM_SRC "${DFP_DIR}/Source/system_ADuCM3029.c")
 set(LINKER_SCRIPT "${DFP_DIR}/Source/GCC/ADuCM3029.ld")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   
 
 # Check if core_cm3.h exists locally
 find_path(CMSIS_CORE_DIR "core_cm3.h"
@@ -94,6 +95,7 @@ target_link_options(firmware.elf PRIVATE
     -Wl,-u,_printf_float
     -Wl,-u,_scanf_float
 )
+target_link_libraries(firmware.elf PRIVATE m)
 # Post-build generation of binary and hex outputs
 add_custom_command(TARGET firmware.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O ihex firmware.elf firmware.hex

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <fstream>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     
@@ -406,6 +407,11 @@ void MainWindow::sendNextSweepPoint() {
 
 }
 void MainWindow::readData() {
+    
+    std::fstream file("data.csv", std::ios::out);
+    if(file.is_open()){
+        file << "phase, impedance\n";
+    }    
     while (serialPort->canReadLine()) {
         QString data = QString::fromUtf8(serialPort->readLine()).trimmed();
         
@@ -427,6 +433,9 @@ void MainWindow::readData() {
                 bool ok1, ok2;
                 double impedance = parts[0].trimmed().toDouble(&ok1);
                 double phase = parts[1].trimmed().toDouble(&ok2);
+                if(file.is_open()){
+                        file << impedance << ", " << phase <<"\n";
+                }
 
                 // Validate that we successfully parsed actual, finite numbers
                 if (!ok1 || !ok2 || !std::isfinite(impedance) || !std::isfinite(phase)) {
@@ -483,6 +492,9 @@ void MainWindow::readData() {
                 bool ok1, ok2;
                 double impedance = parts[0].trimmed().toDouble(&ok1);
                 double phase = parts[1].trimmed().toDouble(&ok2);
+                    if(file.is_open()){
+                        file << impedance << ", " << phase<<"\n";
+                }
 
                 if (ok1 && ok2 && std::isfinite(impedance) && std::isfinite(phase)) {
                     Measurement first = measurementsPending.takeFirst();
@@ -497,6 +509,10 @@ void MainWindow::readData() {
             }
         }
     }
+    if(file.is_open()){
+        file << "\n";
+    }
+    file.close();
 }
 
 void MainWindow::updatePlots() {
@@ -552,3 +568,5 @@ void MainWindow::updatePlots() {
         phaseY.first()->setRange(minP - yMargin, maxP + yMargin);
     }
 }
+
+

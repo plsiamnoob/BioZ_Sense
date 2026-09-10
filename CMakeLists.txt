@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(BioZ_Sense LANGUAGES C CXX)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) 
 
 # Option to select what to build (can be driven by CMakePresets.json)
 option(BUILD_FIRMWARE "Build ADuCM3029 ARM Firmware" ON)
