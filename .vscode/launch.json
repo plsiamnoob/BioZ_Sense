@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run GUI",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/gui/GUI_App/GUI_App",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/gui/GUI_App",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Build All & Flash Firmware"
+        },
+        {
+            "name": "Debug GUI App",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/gui/GUI_App/GUI_App",
+            "cwd": "${workspaceFolder}/build/gui/GUI_App",
+            "stopAtEntry": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "preLaunchTask": "Build All & Flash Firmware"
+        }
+    ]
+}

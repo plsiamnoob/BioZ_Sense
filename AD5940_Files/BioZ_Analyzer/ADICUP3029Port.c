@@ -13,13 +13,10 @@ Analog Devices Software License Agreement.
 
 *****************************************************************************/
 
-#include "ad5940.h"
-#include "ADuCM3029.h"
-
+#include "ADICUP3029Port.h"
 #define SYSTICK_MAXCOUNT ((1L<<24)-1) /* we use Systick to complete function Delay10uS(). This value only applies to ADICUP3029 board. */
 #define SYSTICK_CLKFREQ   26000000L   /* Systick clock frequency in Hz. This only appies to ADICUP3029 board */
 volatile static uint32_t ucInterrupted = 0;       /* Flag to indicate interrupt occurred */
-
 /**
 	@brief Using SPI to transmit N bytes and return the received bytes. This function targets to 
          provide a more efficient way to transmit/receive data.
@@ -148,3 +145,155 @@ void Ext_Int0_Handler()
   /* This example just set the flag and deal with interrupt in AD5940Main function. It's your choice to choose how to process interrupt. */
 }
 
+
+/* Platform Clock & Watchdog Initialization */
+uint32_t MCUPlatformInit(void *pCfg)
+{
+    int UrtCfg(int iBaud);
+
+    /* Stop watchdog timer */
+    pADI_WDT0->CTL = 0xC9;
+
+    /* Configure System Clock */
+    pADI_CLKG0_OSC->KEY = 0xCB14;
+    pADI_CLKG0_OSC->CTL = BITM_CLKG_OSC_CTL_HFOSCEN | BITM_CLKG_OSC_CTL_HFXTALEN;
+
+    /* Timeout safeguard on XTAL stabilization */
+    volatile uint32_t timeout = 100000;
+    while (((pADI_CLKG0_OSC->CTL & BITM_CLKG_OSC_CTL_HFXTALOK) == 0) && (--timeout > 0))
+        ;
+
+    pADI_CLKG0_OSC->KEY = 0xCB14;
+    pADI_CLKG0_CLK->CTL0 = 0x201; /* Select XTAL as system clock */
+    pADI_CLKG0_CLK->CTL1 = 0;     /* Clocks divided by 1 */
+    pADI_CLKG0_CLK->CTL5 = 0x00;  /* Enable peripheral clocks */
+
+    UrtCfg(230400); /* UART Baudrate = 230400 */
+    return 1;
+}
+
+int UrtCfg(int iBaud)
+{
+    int iBits = 3;
+    int iFormat = 0;
+    int i1, iDiv, iRtC, iOSR, iPllMulValue;
+    unsigned long long ullRtClk = 16000000;
+
+    /* Setup P0[11:10] as UART pins */
+    pADI_GPIO0->CFG = (1 << 22) | (1 << 20) | (pADI_GPIO0->CFG & (~((3 << 22) | (3 << 20))));
+
+    iDiv = (pADI_CLKG0_CLK->CTL1 & BITM_CLKG_CLK_CTL1_PCLKDIVCNT) >> 8;
+    if (iDiv == 0) iDiv = 1;
+    iRtC = (pADI_CLKG0_CLK->CTL0 & BITM_CLKG_CLK_CTL0_CLKMUX);
+
+    switch (iRtC)
+    {
+    case 0: ullRtClk = 26000000; break;
+    case 1:
+        if ((pADI_CLKG0_CLK->CTL0 & 0x200) == 0x200)
+            ullRtClk = 26000000;
+        else
+            ullRtClk = 16000000;
+        break;
+    case 2:
+        iPllMulValue = (pADI_CLKG0_CLK->CTL3 & BITM_CLKG_CLK_CTL3_SPLLNSEL);
+        ullRtClk = (iPllMulValue * 1000000);
+        break;
+    case 3: ullRtClk = 26000000; break;
+    default: break;
+    }
+
+    pADI_UART0->COMLCR2 = 0x3;
+    iOSR = 32;
+    i1 = (ullRtClk / (iOSR * iDiv)) / iBaud - 1;
+    pADI_UART0->COMDIV = i1;
+
+    pADI_UART0->COMFBR = 0x8800 | (((((2048 / (iOSR * iDiv)) * ullRtClk) / i1) / iBaud) - 2048);
+    pADI_UART0->COMIEN = 0;
+    pADI_UART0->COMLCR = (iFormat & 0x3c) | (iBits & 3);
+
+    pADI_UART0->COMFCR = (BITM_UART_COMFCR_RFTRIG & 0) | BITM_UART_COMFCR_FIFOEN;
+    pADI_UART0->COMFCR |= BITM_UART_COMFCR_RFCLR | BITM_UART_COMFCR_TFCLR;
+    pADI_UART0->COMFCR &= ~(BITM_UART_COMFCR_RFCLR | BITM_UART_COMFCR_TFCLR);
+
+    NVIC_EnableIRQ(UART_EVT_IRQn);
+    pADI_UART0->COMIEN = BITM_UART_COMIEN_ERBFI | BITM_UART_COMIEN_ELSI;
+    return pADI_UART0->COMLSR;
+}
+
+int UART0_GetChar_Direct(void)
+{
+    if (pADI_UART0->COMLSR & (1 << 0))
+        return (int)(pADI_UART0->COMRX);
+    return -1;
+}
+
+void ReadUART(char *buffer, int len)
+{
+    int i = 0;
+    pADI_UART0->COMIEN &= ~(1 << 0);
+    while (i < len - 1)
+    {
+        int tempchar = UART0_GetChar_Direct();
+        if (tempchar == -1)
+            continue;
+        if (tempchar == '\r' || tempchar == '\n')
+        {
+            if (i > 0)
+                break;
+            continue;
+        }
+        buffer[i++] = (char)tempchar;
+        fflush(stdout);
+    }
+    buffer[i] = '\0';
+    fflush(stdout);
+}
+bool ReadUART_NonBlocking(char *buffer, int len)
+{
+    static int idx = 0;
+    int tempchar = UART0_GetChar_Direct();
+
+    if (tempchar == -1) {
+        return false;
+    }
+
+    if (tempchar == '\r' || tempchar == '\n') {
+        if (idx > 0) {
+            buffer[idx] = '\0';
+            idx = 0;
+            return true;
+        }
+        return false;
+    }
+
+    if (idx < len - 1) {
+        buffer[idx++] = (char)tempchar;
+    }
+    
+    return false;
+}
+#if defined(__GNUC__)
+int _write(int file, char *ptr, int len)
+{
+    for (int i = 0; i < len; i++)
+    {
+        if (ptr[i] == '\n')
+        {
+            pADI_UART0->COMTX = '\r';
+            while ((pADI_UART0->COMLSR & 0x20) == 0)
+                ;
+        }
+        pADI_UART0->COMTX = ptr[i];
+        while ((pADI_UART0->COMLSR & 0x20) == 0)
+            ;
+    }
+    return len;
+}
+
+int _close(int file) { (void)file; return -1; }
+int _fstat(int file, void *st) { (void)file; (void)st; return 0; }
+int _isatty(int file) { (void)file; return 1; }
+int _lseek(int file, int ptr, int dir) { (void)file; (void)ptr; (void)dir; return 0; }
+int _read(int file, char *ptr, int len) { (void)file; (void)ptr; (void)len; return 0; }
+#endif

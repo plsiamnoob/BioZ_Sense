@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.14)
 project(AD5940_BioImpedance C ASM)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Target microcontroller flags
 add_compile_options(
     -mcpu=cortex-m3
@@ -20,13 +22,12 @@ add_compile_definitions(
 )
 
 # Directory paths
-set(EXAMPLE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/BioZ_Analyzer")
 set(DFP_DIR "${CMAKE_CURRENT_SOURCE_DIR}/aducm3029_dfp")
+
 # Target GCC-specific startup and system files
 file(GLOB GCC_STARTUP "${DFP_DIR}/Source/GCC/startup_ADuCM3029.*")
 set(SYSTEM_SRC "${DFP_DIR}/Source/system_ADuCM3029.c")
 set(LINKER_SCRIPT "${DFP_DIR}/Source/GCC/ADuCM3029.ld")
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)   
 
 # Check if core_cm3.h exists locally
 find_path(CMSIS_CORE_DIR "core_cm3.h"
@@ -56,15 +57,18 @@ if(NOT CMSIS_CORE_DIR)
     set(CMSIS_CORE_DIR "${cmsis_core_SOURCE_DIR}/CMSIS/Core/Include")
 endif()
 
-# Only collect sources for the top-level example and the ADICUP3029 port (ignore NUCLEO/STM32)
-file(GLOB EXAMPLE_TOP_SRCS "${EXAMPLE_DIR}/*.c")
-file(GLOB PORT_SRCS "${EXAMPLE_DIR}/ADICUP3029/*.c")
+# Explicitly declare application source files in current folder
+set(APP_SRCS
+    "${CMAKE_CURRENT_SOURCE_DIR}/BioZ_Analyzer/main.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/BioZ_Analyzer/BodyImpedance.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/BioZ_Analyzer/ADICUP3029Port.c"
+)
+
 set(LIB_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/ad5940lib/ad5940.c")
 
 # Executable output definition
 add_executable(firmware.elf 
-    ${EXAMPLE_TOP_SRCS}
-    ${PORT_SRCS} 
+    ${APP_SRCS}
     ${LIB_SRCS} 
     ${GCC_STARTUP} 
     ${SYSTEM_SRC}
@@ -72,8 +76,7 @@ add_executable(firmware.elf
 
 # Include directories
 target_include_directories(firmware.elf PRIVATE
-    ${EXAMPLE_DIR}
-    ${EXAMPLE_DIR}/ADICUP3029
+    ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/ad5940lib
     ${DFP_DIR}/Include
     ${DFP_DIR}/Include/config
@@ -95,7 +98,7 @@ target_link_options(firmware.elf PRIVATE
     -Wl,-u,_printf_float
     -Wl,-u,_scanf_float
 )
-target_link_libraries(firmware.elf PRIVATE m)
+
 # Post-build generation of binary and hex outputs
 add_custom_command(TARGET firmware.elf POST_BUILD
     COMMAND ${CMAKE_OBJCOPY} -O ihex firmware.elf firmware.hex

@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure Firmware (ARM)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--preset", "firmware-arm", "--fresh"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build Firmware (ARM)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--build", "--preset", "firmware-arm"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "dependsOn": ["Configure Firmware (ARM)"],
+            "dependsOrder": "sequence",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Configure GUI (x86_64)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--preset", "gui-x86_64", "--fresh"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build GUI (x86_64)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--build", "--preset", "gui-x86_64"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "dependsOn": ["Configure GUI (x86_64)"],
+            "dependsOrder": "sequence",
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Flash AD5940 via pyOCD",
+            "type": "shell",
+            "command": "python3",
+            "args": ["-m", "pyocd", "flash", "-t", "aducm3029", "build/firmware/AD5940_Files/firmware.elf"],
+            "options": { "cwd": "${workspaceFolder}" },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build All & Flash Firmware",
+            "dependsOn": ["Build Firmware (ARM)", "Build GUI (x86_64)", "Flash AD5940 via pyOCD"],
+            "dependsOrder": "sequence",
+            "group": { "kind": "build", "isDefault": true }
+        },
+        {
+            "label": "Build GUI Only",
+            "dependsOn": ["Build GUI (x86_64)"],
+            "dependsOrder": "sequence",
+            "group": "build"
+        }
+    ]
+}

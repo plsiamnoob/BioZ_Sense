@@ -17,6 +17,12 @@ Analog Devices Software License Agreement.
   The variables are usable in this whole application.
   It includes basic configuration for sequencer generator and application related parameters
 */
+#define BIA_APPBUFF_SIZE 512
+
+/* Internal RAM buffer for sequencer commands and DFT results */
+static uint32_t AppBuff[BIA_APPBUFF_SIZE];
+
+
 AppBIACfg_Type AppBIACfg =
     {
         .bParaChanged = bFALSE,
@@ -26,7 +32,7 @@ AppBIACfg_Type AppBIACfg =
         .SeqStartAddrCal = 0,
         .MaxSeqLenCal = 0,
 
-        .ReDoRtiaCal = bFALSE,
+        .ReDoRtiaCal = bTRUE,
         .SysClkFreq = 16000000.0,
         .WuptClkFreq = 32000.0,
         .AdcClkFreq = 16000000.0,
@@ -363,7 +369,43 @@ static AD5940Err AppBIASeqMeasureGen(void)
   return AD5940ERR_OK;
 }
 
+//New calibraiton function optimized for streaming data.
+static AD5940Err AppBIARtiaCal(void)
+{
 
+  HSRTIACal_Type hsrtia_cal;
+
+  hsrtia_cal.AdcClkFreq   = AppBIACfg.AdcClkFreq;
+  hsrtia_cal.ADCSinc2Osr  = AppBIACfg.ADCSinc2Osr;
+  hsrtia_cal.ADCSinc3Osr  = AppBIACfg.ADCSinc3Osr;
+  hsrtia_cal.bPolarResult = bTRUE;
+  hsrtia_cal.DftCfg.DftNum = AppBIACfg.DftNum;
+  hsrtia_cal.DftCfg.DftSrc = AppBIACfg.DftSrc;
+  hsrtia_cal.DftCfg.HanWinEn = AppBIACfg.HanWinEn;
+  hsrtia_cal.fRcal        = AppBIACfg.RcalVal;
+  hsrtia_cal.HsTiaCfg.DiodeClose   = bFALSE;
+  hsrtia_cal.HsTiaCfg.HstiaBias    = HSTIABIAS_1P1;
+  hsrtia_cal.HsTiaCfg.HstiaCtia    = AppBIACfg.CtiaSel;
+  hsrtia_cal.HsTiaCfg.HstiaDeRload = HSTIADERLOAD_OPEN;
+  hsrtia_cal.HsTiaCfg.HstiaDeRtia  = HSTIADERTIA_TODE;
+  hsrtia_cal.HsTiaCfg.HstiaRtiaSel = AppBIACfg.HstiaRtiaSel;
+  hsrtia_cal.SysClkFreq   = AppBIACfg.SysClkFreq;
+
+  if (AppBIACfg.SweepCfg.SweepEn == bTRUE)
+  {
+    hsrtia_cal.fFreq = AppBIACfg.SweepCurrFreq;
+  }
+  else
+  {
+    hsrtia_cal.fFreq = AppBIACfg.SinFreq;
+  }
+  //Single calibration directly into active RAM variable 
+  AD5940_HSRtiaCal(&hsrtia_cal, AppBIACfg.RtiaCurrValue);
+
+  return AD5940ERR_OK;
+}
+/*
+//Legacy. Used enitre data to calibrate.
 static AD5940Err AppBIARtiaCal()
 {
   HSRTIACal_Type hsrtia_cal;
@@ -371,7 +413,7 @@ static AD5940Err AppBIARtiaCal()
   hsrtia_cal.AdcClkFreq = AppBIACfg.AdcClkFreq;
   hsrtia_cal.ADCSinc2Osr = AppBIACfg.ADCSinc2Osr;
   hsrtia_cal.ADCSinc3Osr = AppBIACfg.ADCSinc3Osr;
-  hsrtia_cal.bPolarResult = bTRUE; /* We need magnitude and phase here */
+  hsrtia_cal.bPolarResult = bTRUE; //We need magnitude and phase here
   hsrtia_cal.DftCfg.DftNum = AppBIACfg.DftNum;
   hsrtia_cal.DftCfg.DftSrc = AppBIACfg.DftSrc;
   hsrtia_cal.DftCfg.HanWinEn = AppBIACfg.HanWinEn;
@@ -388,16 +430,17 @@ static AD5940Err AppBIARtiaCal()
   if (AppBIACfg.SweepCfg.SweepEn == bTRUE)
   {
     uint32_t i;
-    AppBIACfg.SweepCfg.SweepIndex = 0; /* Reset index */
+    AppBIACfg.SweepCfg.SweepIndex = 0; // Reset index
     for (i = 0; i < AppBIACfg.SweepCfg.SweepPoints; i++)
     {
       AD5940_HSRtiaCal(&hsrtia_cal, AppBIACfg.RtiaCalTable[i]);
+
 #ifdef ADI_DEBUG
       ADI_Print("Freq:%.2f, RTIA: Mag:%f Ohm, Phase:%.3f\n", hsrtia_cal.fFreq, AppBIACfg.RtiaCalTable[i][0], AppBIACfg.RtiaCalTable[i][1]);
 #endif
       AD5940_SweepNext(&AppBIACfg.SweepCfg, &hsrtia_cal.fFreq);
     }
-    AppBIACfg.SweepCfg.SweepIndex = 0; /* Reset index */
+    AppBIACfg.SweepCfg.SweepIndex = 0; // Reset index
     AppBIACfg.RtiaCurrValue[0] = AppBIACfg.RtiaCalTable[AppBIACfg.SweepCfg.SweepIndex][0];
     AppBIACfg.RtiaCurrValue[1] = AppBIACfg.RtiaCalTable[AppBIACfg.SweepCfg.SweepIndex][1];
   }
@@ -408,7 +451,7 @@ static AD5940Err AppBIARtiaCal()
   }
   return AD5940ERR_OK;
 }
-
+*/
 /* This function provide application initialize.   */
 AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize)
 {
@@ -430,12 +473,6 @@ AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize)
 
   /* Do RTIA calibration */
 
-  if ((AppBIACfg.ReDoRtiaCal == bTRUE) ||
-      AppBIACfg.BIAInited == bFALSE) /* Do calibration on the first initializaion */
-  {
-    AppBIARtiaCal();
-    AppBIACfg.ReDoRtiaCal = bFALSE;
-  }
   /* Reconfigure FIFO */
   AD5940_FIFOCtrlS(FIFOSRC_DFT, bFALSE); /* Disable FIFO firstly */
   fifo_cfg.FIFOEn = bTRUE;
@@ -521,7 +558,65 @@ static AD5940Err AppBIARegModify(int32_t *const pData, uint32_t *pDataCount)
   return AD5940ERR_OK;
 }
 
-/* Depending on the data type, do appropriate data pre-process before return back to controller */
+
+//New stream focused data process.
+static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
+{
+  uint32_t DataCount = *pDataCount;
+  uint32_t ImpResCount = DataCount / 4;
+
+  fImpPol_Type *const pOut = (fImpPol_Type *)pData;
+  iImpCar_Type *pSrcData = (iImpCar_Type *)pData;
+
+  *pDataCount = 0;
+  DataCount = (DataCount / 4) * 4;
+
+  /* Convert 18-bit DFT result */
+
+  for (uint32_t i = 0; i < DataCount; i++)
+  {
+    pData[i] &= 0x3ffff;
+    if (pData[i] & (1 << 17))
+    {
+      pData[i] |= 0xfffc0000;
+    }
+  }
+
+  /* Compute Impedance Magnitude & Phase for the current frequency point */
+  
+  for (uint32_t i = 0; i < ImpResCount; i++)
+  {
+    iImpCar_Type *pDftVolt, *pDftCurr;
+
+    pDftCurr = pSrcData++;
+    pDftVolt = pSrcData++;
+    float VoltMag, VoltPhase;
+    float CurrMag, CurrPhase;
+
+    VoltMag = sqrt((float)pDftVolt->Real * pDftVolt->Real + (float)pDftVolt->Image * pDftVolt->Image);
+    VoltPhase = atan2(-pDftVolt->Image, pDftVolt->Real);
+    CurrMag = sqrt((float)pDftCurr->Real * pDftCurr->Real + (float)pDftCurr->Image * pDftCurr->Image);
+    CurrPhase = atan2(-pDftCurr->Image, pDftCurr->Real);
+
+    VoltMag = VoltMag / CurrMag * AppBIACfg.RtiaCurrValue[0];
+    VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
+    pOut[i].Magnitude = VoltMag;
+    pOut[i].Phase = VoltPhase;
+  }
+  *pDataCount = ImpResCount;
+
+  // Advance frequency and recalibrate RTIA on-the-fly for the next point 
+  if (AppBIACfg.SweepCfg.SweepEn == bTRUE)
+  {
+
+    //Advance AD5940 hardware frequency generator 
+    AD5940_SweepNext(&AppBIACfg.SweepCfg, &AppBIACfg.SweepNextFreq);
+  }
+  return AD5940ERR_OK;
+}
+//Depending on the data type, do appropriate data pre-process before return back to controller 
+//this is the old legacy process.
+/*
 static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
 {
   uint32_t DataCount = *pDataCount;
@@ -532,15 +627,15 @@ static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
 
   *pDataCount = 0;
 
-  DataCount = (DataCount / 4) * 4; /* We expect RCAL data together with Rz data. One DFT result has two data in FIFO, real part and imaginary part.  */
+  DataCount = (DataCount / 4) * 4; // We expect RCAL data together with Rz data. One DFT result has two data in FIFO, real part and imaginary part.
 
-  /* Convert DFT result to int32_t type */
+  // Convert DFT result to int32_t type 
   for (uint32_t i = 0; i < DataCount; i++)
   {
-    pData[i] &= 0x3ffff;      /* @todo option to check ECC */
-    if (pData[i] & (1 << 17)) /* Bit17 is sign bit */
+    pData[i] &= 0x3ffff;      // @todo option to check ECC 
+    if (pData[i] & (1 << 17)) // Bit17 is sign bit 
     {
-      pData[i] |= 0xfffc0000; /* Data is 18bit in two's complement, bit17 is the sign bit */
+      pData[i] |= 0xfffc0000; // Data is 18bit in two's complement, bit17 is the sign bit
     }
   }
   for (uint32_t i = 0; i < ImpResCount; i++)
@@ -559,12 +654,11 @@ static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
 
     VoltMag = VoltMag / CurrMag * AppBIACfg.RtiaCurrValue[0];
     VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
-
     pOut[i].Magnitude = VoltMag;
     pOut[i].Phase = VoltPhase;
   }
   *pDataCount = ImpResCount;
-  /* Calculate next frequency point */
+  // Calculate next frequency point
   if (AppBIACfg.SweepCfg.SweepEn == bTRUE)
   {
     AppBIACfg.FreqofData = AppBIACfg.SweepCurrFreq;
@@ -574,7 +668,7 @@ static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
     AD5940_SweepNext(&AppBIACfg.SweepCfg, &AppBIACfg.SweepNextFreq);
   }
   return AD5940ERR_OK;
-}
+}*/
 
 /**
  */
@@ -606,46 +700,127 @@ AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount)
     AD5940_SleepKeyCtrlS(SLPKEY_UNLOCK); /* Allow AFE to enter hibernate mode */
     /* Process data */
     AppBIADataProcess((int32_t *)pBuff, &FifoCnt);
+    AppBIACfg.FreqofData = AppBIACfg.SweepCurrFreq;
+    AppBIACfg.SweepCurrFreq = AppBIACfg.SweepNextFreq;
     *pCount = FifoCnt;
+    AppBIARtiaCal();
     return 0;
   }
 
   return 0;
 }
-AD5940Err AppBIAMeasureSingle(uint32_t *pBuffer, uint32_t BufferSize, float targetFreq, float* impedance, float* phase)
+
+
+/* Non-blocking UART check to catch mid-sweep abort signals */
+static bool CheckForStopSignal(void)
 {
-  uint32_t buffer[4]; /* Buffer for 4 FIFO words (Volt/Curr Real/Imag) */
-  uint32_t count = 4;
-
-  AppBIAInit(pBuffer, BufferSize);
-  /* 1. Disable sweep & set target frequency */
-  AppBIACfg.SweepCfg.SweepEn = bFALSE; /* Prevents AppBIADataProcess from advancing sweep state */
-  AppBIACfg.SinFreq = targetFreq;
-  AppBIACfg.FreqofData = targetFreq;
-
-  AD5940_WGFreqCtrlS(targetFreq, AppBIACfg.SysClkFreq);
-
-  /* 2. Wake AFE and trigger measurement sequence */
-  AD5940_WakeUp(10);
-  AD5940_SEQMmrTrig(AppBIACfg.MeasureSeqInfo.SeqId);
-
-  /* 3. Poll for FIFO threshold flag */
-  uint32_t timeout = 100000;
-  while ((AD5940_INTCTestFlag(AFEINTC_0, AFEINTSRC_DATAFIFOTHRESH) == bFALSE) && --timeout);
-  if (timeout == 0) return AD5940ERR_TIMEOUT;
-
-  /* 4. Run ISR (Reads FIFO, sign-extends 18-bit data, and calls AppBIADataProcess) */
-  AppBIAISR(buffer, &count);
-  if(count == 0){
-    return AD5940ERR_ERROR;
-  }
-  /* 5. Extract calibrated result (buffer was cast and converted in-place) */
-    fImpPol_Type *pPol = (fImpPol_Type *)buffer;
-    *impedance = pPol->Magnitude;
-    *phase = pPol->Phase;
-
-  return AD5940ERR_OK;
+    char stop_buf[32] = {0};
+    if (ReadUART_NonBlocking(stop_buf, sizeof(stop_buf))) {
+        if (strstr(stop_buf, "STOPSWEEP") != NULL) {
+            AppBIACfg.StopRequired = bTRUE;
+            return true;
+        }
+    }
+    return false;
 }
+
+/* Core execution loop for processing sweep data points */
+static AD5940Err ExecuteBIASweepLoop(int total_points)
+{
+    uint32_t temp;
+    int point_count = 0;
+
+    // Force re-initialization and RTIA recalibration for new sweep parameters
+    AppBIACfg.bParaChanged = bTRUE;
+    AppBIACfg.StopRequired = bFALSE;
+    AppBIACfg.ReDoRtiaCal = bTRUE;
+
+    if (AppBIAInit(AppBuff, 512) != AD5940ERR_OK) {
+        printf("ERR INIT_FAILED\n");
+        return AD5940ERR_APPERROR;
+    }
+
+    // Start Wakeup Timer (WUPT) driven BIA measurement
+    AppBIACtrl(BIACTRL_START, 0);
+
+    while (point_count < total_points)
+    {
+        if (AppBIACfg.StopRequired == bTRUE) {
+            AppBIACtrl(BIACTRL_STOPSYNC, 0);
+            printf("SWEEPSTOPPED\n");
+            return AD5940ERR_OK;
+        }
+
+        // Wait for MCU Interrupt Flag from AD5940 GP0 Pin
+        if (AD5940_GetMCUIntFlag())
+        {
+          if (CheckForStopSignal()) {
+              AppBIACtrl(BIACTRL_STOPSYNC, 0);
+              printf("SWEEPSTOPPED\n");
+              return AD5940ERR_OK;
+          }
+            AD5940_ClrMCUIntFlag();
+            temp = 512;
+            
+            // Process raw DFT FIFO data -> converts to Impedance & Phase
+            AppBIAISR(AppBuff, &temp);
+
+            if (temp > 0)
+            {
+                fImpPol_Type *pImp = (fImpPol_Type *)AppBuff;
+                for (uint32_t i = 0; i < temp; i++)
+                {
+                  if (CheckForStopSignal()) {
+                        AppBIACtrl(BIACTRL_STOPSYNC, 0);
+                        printf("SWEEPSTOPPED\n");
+                        return AD5940ERR_OK;
+                    }
+                    // Stream real-time data back to Qt GUI
+                    printf("DATA %f, %f\n", pImp[i].Magnitude, pImp[i].Phase * RAD_TO_DEG);
+                    point_count++;
+                }
+            }
+        }
+    }
+
+    AppBIACtrl(BIACTRL_STOPSYNC, 0);
+    printf("SWEEPCOMPLETE\n");
+    return AD5940ERR_OK;
+}
+
+AD5940Err PerformLinearSweep(float start, float stop, int pts)
+{
+    AppBIACfg.SweepCfg.SweepEn = bTRUE;
+    AppBIACfg.SweepCfg.SweepStart = start;
+    AppBIACfg.SweepCfg.SweepStop = stop;
+    AppBIACfg.SweepCfg.SweepPoints = pts;
+    AppBIACfg.SweepCfg.SweepLog = bFALSE;
+    AppBIACfg.SweepCfg.SweepIndex = 0;
+    return ExecuteBIASweepLoop(pts);
+}
+
+AD5940Err PerformLogSweep(float start, float stop, int pts)
+{
+    AppBIACfg.SweepCfg.SweepEn = bTRUE;
+    AppBIACfg.SweepCfg.SweepStart = start;
+    AppBIACfg.SweepCfg.SweepStop = stop;
+    AppBIACfg.SweepCfg.SweepPoints = pts;
+    AppBIACfg.SweepCfg.SweepLog = bTRUE;
+    AppBIACfg.SweepCfg.SweepIndex = 0;
+
+    return ExecuteBIASweepLoop(pts);
+}
+
+AD5940Err PerformConstantSweep(float freq, int pts)
+{
+    AppBIACfg.SweepCfg.SweepEn = bFALSE;
+    AppBIACfg.SinFreq = freq;
+    AppBIACfg.NumOfData = pts;
+
+    return ExecuteBIASweepLoop(pts);
+}
+
+
 /**
  * @}
  */

@@ -2,24 +2,26 @@
 .venv/
 __pycache__/
 *.pyc
-.vscode/
-build/
 
-# Removed Windows deployment and legacy Python GUI files
+build/
+**/compile_commands.json
+
+# Removed legacy application files
+GUI_App/src/
 deploy.sh
 deploy_windows_64.bat
-GUI_App/src/GUI.py
-GUI_App/src/requirements.txt
+AD5940_Files/BioZ_Analyzer/AD5940Main.c
+AD5940_Files/BioZ_Analyzer/ADICUP3029/
 
-# Unsupported ADuCM3027 and non-GCC DFP variants
+# Removed ADuCM3027 and non-GCC DFP variants
 AD5940_Files/aducm3029_dfp/Include/ADuCM3027*.h
 AD5940_Files/aducm3029_dfp/Include/system_ADuCM3027.h
 AD5940_Files/aducm3029_dfp/Source/ARM/startup_ADuCM3027.s
+AD5940_Files/aducm3029_dfp/Source/ARM/startup_ADuCM3029.s
 AD5940_Files/aducm3029_dfp/Source/GCC/ADuCM3027.ld
 AD5940_Files/aducm3029_dfp/Source/GCC/reset_ADuCM3027.S
+AD5940_Files/aducm3029_dfp/Source/GCC/reset_ADuCM3029.S
 AD5940_Files/aducm3029_dfp/Source/GCC/startup_ADuCM3027.c
 AD5940_Files/aducm3029_dfp/Source/IAR/startup_ADuCM3027.s
-AD5940_Files/aducm3029_dfp/Source/system_ADuCM3027.c
-AD5940_Files/aducm3029_dfp/Source/ARM/startup_ADuCM3029.s
-AD5940_Files/aducm3029_dfp/Source/GCC/reset_ADuCM3029.S
 AD5940_Files/aducm3029_dfp/Source/IAR/startup_ADuCM3029.s
+AD5940_Files/aducm3029_dfp/Source/system_ADuCM3027.c

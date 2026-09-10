@@ -8,16 +8,18 @@
       "binaryDir": "${sourceDir}/build/firmware",
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/toolchain-arm.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "BUILD_FIRMWARE": "ON",
         "BUILD_GUI": "OFF"
       }
     },
     {
       "name": "gui-x86_64",
-      "displayName": "GUI App (x86_64)",
+      "displayName": "GUI App (Linux x86_64)",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/gui",
       "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "BUILD_FIRMWARE": "OFF",
         "BUILD_GUI": "ON"
       }
@@ -35,4 +37,4 @@
       "displayName": "Build GUI (x86_64)"
     }
   ]
-}   
+}

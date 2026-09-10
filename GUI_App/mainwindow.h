@@ -1,4 +1,5 @@
 #pragma once
+
 #include <QMainWindow>
 #include <QSerialPort>
 #include <QSerialPortInfo>
@@ -22,6 +23,7 @@
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QFormLayout>
+
 struct Measurement {
     double frequency = 0.0;
     double impedance = 0.0;
@@ -38,44 +40,55 @@ public:
 private slots:
     void populateSerialPorts();
     void onPortSelected(int index);
-    void startSweep();          // Replaces sendFrequency
+    void startSweep();
     void readData();
-    void sendNextSweepPoint();  // Handles the queue
-    void updateLinearMaxLabel(); // New slot
+    void updateLinearMaxLabel();
     void clearGraphs(); 
     void onStartSweepClicked();
+
 private:
     void stopSweep();
     void updatePlots();
-    QPlainTextEdit *consoleOutput; // Text box for board responses
-    QTimer *serialPollTimer; // Replaces readyRead
+
+    QPlainTextEdit *consoleOutput;
+    QTimer *serialPollTimer;
 
     QSerialPort *serialPort;
     QElapsedTimer timer;
     double accumulatedTime = 0.0; 
-    qint64 lastTime = 0;         // <-- Use qint64 for exact timer matching
-    bool isSweepActive = false;  // <-- Simple flag to control the clock
-    // ...
+    qint64 lastTime = 0;
+    bool isSweepActive = false;
 
     // Data Containers
     QList<Measurement> measurementsPending;
     QList<Measurement> measurementsDisplayed;
-    QQueue<double> sweepQueue; // Holds generated frequencies to be sent
+    QQueue<double> sweepQueue;
 
-    // UI Elements
+    // Main Controls
     QComboBox *portComboBox;
     QPushButton *refreshButton;
     QPushButton *sendButton;
-QPushButton *clearButton; 
+    QPushButton *clearButton; 
+
     // Sweep Configuration UI
     QComboBox *sweepModeBox;
     QStackedWidget *sweepParamsWidget;
     
-    QDoubleSpinBox *freqInput;       // One-Shot
-    QDoubleSpinBox *linStart, *linStep; // Linear
-    QDoubleSpinBox *logStart, *logEnd; QSpinBox *logSamples; // Logarithmic
-    QSpinBox *linSamples; // Added back!
+    // Single Frequency Mode
+    QDoubleSpinBox *freqInput;       // Fixed: Added missing definition
+    QSpinBox *singlePointsBox;       // Fixed: Corrected type from QDoubleSpinBox to QSpinBox
+
+    // Linear Sweep Mode
+    QDoubleSpinBox *linStart;
+    QDoubleSpinBox *linStep;
+    QSpinBox *linSamples;
     QLabel *linMaxLabel;
+
+    // Logarithmic Sweep Mode
+    QDoubleSpinBox *logStart;
+    QDoubleSpinBox *logEnd;
+    QSpinBox *logSamples;
+
     // Charts
     QScatterSeries *impSeries;
     QScatterSeries *phaseSeries;

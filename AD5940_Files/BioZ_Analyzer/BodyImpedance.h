@@ -14,15 +14,22 @@ Analog Devices Software License Agreement.
 
 *****************************************************************************/
 
-#ifndef _BODYCOMPOSITION_H_
-#define _BODYCOMPOSITION_H_
+#ifndef _BODYIMPEDANCE_H_
+#define _BODYIMPEDANCE_H_
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "ADICUP3029Port.h"
 #include "ad5940.h"
 #include "stdio.h"
 #include "string.h"
 #include "math.h"
 
-#define MAXSWEEP_POINTS 100 /* Need to know how much buffer is needed to save RTIA calibration result */
 
+#define SWEEPPOINTS_BUFFER 1 /* Need to know how much buffer is needed to save RTIA calibration result */
+#ifndef RAD_TO_DEG
+#define RAD_TO_DEG (180.0f / 3.14159265358979323846f)
+#endif
 /*
   Note: this example will use SEQID_0 as measurement sequence, and use SEQID_1 as init sequence.
   SEQID_3 is used for calibration.
@@ -68,7 +75,7 @@ typedef struct
   float SweepCurrFreq;
   float SweepNextFreq;
   float RtiaCurrValue[2];                 /* Calibrated Rtia value of current frequency */
-  float RtiaCalTable[MAXSWEEP_POINTS][2]; /* Calibrated Rtia Value table */
+  float RtiaCalTable[SWEEPPOINTS_BUFFER][2]; /* Calibrated Rtia Value table */
   float FreqofData;                       /* The frequency of latest data sampled */
   BoolFlag BIAInited;                     /* If the program run firstly, generated sequence commands */
   SEQInfo_Type InitSeqInfo;
@@ -86,9 +93,13 @@ typedef struct
 #define BIACTRL_GETFREQ 3  /* Get Current frequency of returned data from ISR */
 #define BIACTRL_SHUTDOWN 4 /* Note: shutdown here means turn off everything and put AFE to hibernate mode. The word 'SHUT DOWN' is only used here. */
 
+extern AppBIACfg_Type AppBIACfg;
+
 AD5940Err AppBIAGetCfg(void *pCfg);
 AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize);
 AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount);
 AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara);
-AD5940Err AppBIAMeasureSingle(uint32_t *pBuffer, uint32_t BufferSize, float targetFreq, float* impedance, float* phase);
+AD5940Err PerformLinearSweep(float start, float stop, int pts);
+AD5940Err PerformLogSweep(float start, float stop, int pts);
+AD5940Err PerformConstantSweep(float freq, int pts);
 #endif
