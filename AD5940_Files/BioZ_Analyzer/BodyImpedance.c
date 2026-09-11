@@ -641,11 +641,26 @@ static AD5940Err ExecuteBIASweepLoop(int total_points)
     uint32_t* buff_ptr = AppBuff;
     uint32_t temp;
     int point_count = 0;
-    
+
+    AD5940_WakeUp(10);
     // Force re-initialization and RTIA recalibration for new sweep parameters
+    AD5940_WUPTCtrl(bFALSE);          // stop wakeup timer if still active
+AD5940_INTCClrFlag(AFEINTSRC_ALLINT);   // clear all latched AFE interrupts
+AD5940_ClrMCUIntFlag();           // clear MCU-side interrupt latch
+AD5940_FIFOCtrlS(FIFOSRC_DFT, bFALSE);   // disable FIFO
+AppBIACfg.StopRequired = bFALSE;
+AppBIACfg.FifoDataCount = 0;
+AppBIACfg.SweepCfg.SweepIndex = 0;
+AppBIACfg.SweepCurrFreq = AppBIACfg.SweepCfg.SweepStart;
+AppBIACfg.SweepNextFreq = AppBIACfg.SweepCfg.SweepStart;
+AppBIACfg.FreqofData = AppBIACfg.SweepCfg.SweepStart;
+AppBIACfg.RtiaCurrValue[0] = 0.0f;
+AppBIACfg.RtiaCurrValue[1] = 0.0f;
+AppBIACfg.BIAInited = bFALSE;
     AppBIACfg.bParaChanged = bTRUE;
     AppBIACfg.StopRequired = bFALSE;
     AppBIACfg.ReDoRtiaCal = bTRUE;
+    AppBIACfg.BIAInited = bFALSE;
 
     if (AppBIAInit(AppBuff, 512) != AD5940ERR_OK) {
         printf("ERR INIT_FAILED\n");
@@ -663,13 +678,19 @@ static AD5940Err ExecuteBIASweepLoop(int total_points)
             printf("SWEEPSTOPPED\n");
             return AD5940ERR_OK;
         }
+        uint32_t afe_flags = AD5940_INTCGetFlag(AFEINTC_0);
+uint32_t fifo_count = AD5940_FIFOGetCnt();
 
+printf("MCU:%lu AFE0:0x%08lX FIFO:%lu\n",
+       AD5940_GetMCUIntFlag(),
+       afe_flags,
+       fifo_count);
         // Wait for MCU Interrupt Flag from AD5940 GP0 Pin
         if (AD5940_GetMCUIntFlag())
         {
+            printf("MCUINTFLAG\n");
             AD5940_ClrMCUIntFlag();
             temp = 512;
-            
             // Process raw DFT FIFO data -> converts to Impedance & Phase
             AppBIAISR(buff_ptr, &temp);
             point_count += temp;
