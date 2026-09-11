@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // Console
     consoleOutput = new QPlainTextEdit(this);
     consoleOutput->setReadOnly(true);
-    consoleOutput->setMaximumBlockCount(1000); 
+    consoleOutput->setMaximumBlockCount(0); 
     consoleOutput->setFixedHeight(100);        
 
     // --- SWEEP UI SETUP ---

@@ -316,7 +316,7 @@ uint32_t AD5940_SEQCycleTime(void)
 {
   uint32_t i, Cycles, Cmd;  
   Cycles = 0;
-  for(i=0;i<SeqGenDB.RegCount;i++)
+  for(i=0;i<SeqGenDB.SeqLen;i++)
   {
     Cmd = (SeqGenDB.pSeqBuff[i]  >> 30) & 0x3;
     if (Cmd & 0x2)
