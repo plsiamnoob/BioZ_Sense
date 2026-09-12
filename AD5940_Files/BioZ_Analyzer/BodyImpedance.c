@@ -567,7 +567,7 @@ static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
 
     VoltMag = VoltMag / CurrMag * AppBIACfg.RtiaCurrValue[0];
     VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
-
+    printf("Freq: %.2f Hz, Mag: %.3f Ohm, Phase: %.3f rad\n", AppBIACfg.FreqofData, VoltMag, VoltPhase);
     pOut[i].Magnitude = VoltMag;
     pOut[i].Phase = VoltPhase;
   }
@@ -639,11 +639,13 @@ static bool CheckForStopSignal(void)
 /* Core execution loop for processing sweep data points */
 static AD5940Err ExecuteBIASweepLoop(int total_points)
 {
+    AD5940_Initialize();
     uint32_t* buff_ptr = AppBuff;
     uint32_t temp;
     int point_count = 0;
+    int iterations = 0;
 
-
+    AppBIACfg.SweepCfg.SweepEn = bTRUE;
     AppBIACfg.bParaChanged = bTRUE;
     AppBIACfg.StopRequired = bFALSE;
     AppBIACfg.ReDoRtiaCal = bTRUE;
@@ -673,23 +675,28 @@ static AD5940Err ExecuteBIASweepLoop(int total_points)
             temp = 512;
             // Process raw DFT FIFO data -> converts to Impedance & Phase
             AppBIAISR(buff_ptr, &temp);
+            iterations += temp;
             point_count += temp;
             buff_ptr += (temp * 2); // Move pointer forward by number of points processed
-            if (point_count >= total_points)
+            if (iterations > 200)
             {
                 fImpPol_Type *pImp = (fImpPol_Type *)AppBuff;
-                for (uint32_t i = 0; i < point_count; i++)
+                for (uint32_t i = 0; i < iterations; i++)
                 {
-
-                  if (CheckForStopSignal()) {
-                        AppBIACtrl(BIACTRL_STOPSYNC, 0);
-                        printf("SWEEPSTOPPED\n");
-                        return AD5940ERR_OK;
-                    }
                     // Stream real-time data back to Qt GUI
                     printf("DATA %f, %f\n", pImp[i].Magnitude, pImp[i].Phase * RAD_TO_DEG);
                 }
-                break;
+                buff_ptr = AppBuff;
+                iterations = 0;
+            }
+            if(point_count > total_points) {
+                fImpPol_Type *pImp = (fImpPol_Type *)AppBuff;
+                for (uint32_t i = 0; i < iterations; i++)
+                {
+                    // Stream real-time data back to Qt GUI
+                    printf("DATA %f, %f\n", pImp[i].Magnitude, pImp[i].Phase * RAD_TO_DEG);
+                }
+                break; // Exit loop after processing all points
             }
         }
     }
@@ -701,7 +708,6 @@ static AD5940Err ExecuteBIASweepLoop(int total_points)
 
 AD5940Err PerformLinearSweep(float start, float stop, int pts)
 {
-    AppBIACfg.SweepCfg.SweepEn = bTRUE;
     AppBIACfg.SweepCfg.SweepStart = start;
     AppBIACfg.SweepCfg.SweepStop = stop;
     AppBIACfg.SweepCfg.SweepPoints = pts;
@@ -713,7 +719,6 @@ AD5940Err PerformLinearSweep(float start, float stop, int pts)
 
 AD5940Err PerformLogSweep(float start, float stop, int pts)
 {
-    AppBIACfg.SweepCfg.SweepEn = bTRUE;
     AppBIACfg.SweepCfg.SweepStart = start;
     AppBIACfg.SweepCfg.SweepStop = stop;
     AppBIACfg.SweepCfg.SweepPoints = pts;
@@ -725,10 +730,11 @@ AD5940Err PerformLogSweep(float start, float stop, int pts)
 
 AD5940Err PerformConstantSweep(float freq, int pts)
 {
-    AppBIACfg.SweepCfg.SweepEn = bFALSE;
+    AppBIACfg.SweepCfg.SweepStart = freq;
+    AppBIACfg.SweepCfg.SweepStop = freq;
     AppBIACfg.SinFreq = freq;
     AppBIACfg.NumOfData = pts;
-
+    
     return ExecuteBIASweepLoop(pts);
 }
 

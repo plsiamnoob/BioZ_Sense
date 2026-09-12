@@ -8,19 +8,6 @@
 #include "string.h"
 #include "math.h"
 
-#define BIA_BUFF_SIZE 512
-static uint32_t AppBuff[BIA_BUFF_SIZE];
-
-// Inside your main() or AD5940 initialization block
-void System_Init() {
-    AD5940_Initialize();
-    
-    // Run calibration ONCE on the internal RCAL during startup
-    AppBIAInit(AppBuff, BIA_BUFF_SIZE);
-    // AppBIACtrl(BIACTRL_SYSCTRL, ...); // Run your cal here
-    
-    printf("READY\n"); // Signal GUI that board is booted and calibrated
-}
 /* Preserved from AD5940Main.c: Complete BIA Structure Initialization */
 void AD5940BIAStructInit(void)
 {
@@ -101,10 +88,7 @@ int main(void)
 
     /* Initialize AD5940 AFE Hardware & BIA Defaults */
     LocalAD5940PlatformCfg();
-    AD5940BIAStructInit();
-
-    System_Init();
-    
+    AD5940BIAStructInit(); 
 
     while (1)
     {

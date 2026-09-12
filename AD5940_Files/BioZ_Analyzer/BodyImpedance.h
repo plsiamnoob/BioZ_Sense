@@ -26,7 +26,7 @@ Analog Devices Software License Agreement.
 #include "math.h"
 
 
-#define SWEEPPOINTS_BUFFER 100 /* Need to know how much buffer is needed to save RTIA calibration result */
+#define SWEEPPOINTS_BUFFER 1000 /* Need to know how much buffer is needed to save RTIA calibration result */
 #ifndef RAD_TO_DEG
 #define RAD_TO_DEG (180.0f / 3.14159265358979323846f)
 #endif
