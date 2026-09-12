@@ -4,6 +4,7 @@
 #include <cmath>
 #include <algorithm>
 #include <QToolTip>
+#include <fstream>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     
@@ -297,6 +298,15 @@ void MainWindow::startSweep() {
     impSeries->clear();
     phaseSeries->clear();
 
+    std::fstream file("../../../sweep_data.csv", std::ios::out | std::ios::app);
+
+    if(file.is_open()){
+        file << "Impedance,Phase\n"; 
+        file.close();
+    } else {
+        qWarning() << "Failed to open sweep_data.csv for writing.";
+    }
+
     isSweepActive = true;
     lastTime = timer.elapsed();
     accumulatedTime = 0.0;
@@ -395,9 +405,14 @@ void MainWindow::readData() {
                 double impedance = parts[0].trimmed().toDouble(&ok1);
                 double phase = parts[1].trimmed().toDouble(&ok2);
 
+
                 if (ok1 && ok2 && std::isfinite(impedance) && std::isfinite(phase)) {
                     Measurement m;
-                    
+                    std::fstream file("../../../sweep_data.csv", std::ios::out | std::ios::app);
+                    if(file.is_open()){
+                        file << impedance << "," << phase << "\n";
+                        file.close();
+                    }
                     if (!measurementsPending.isEmpty()) {
                         m = measurementsPending.takeFirst();
                     } else {

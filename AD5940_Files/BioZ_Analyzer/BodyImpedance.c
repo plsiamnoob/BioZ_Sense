@@ -567,7 +567,7 @@ static AD5940Err AppBIADataProcess(int32_t *const pData, uint32_t *pDataCount)
 
     VoltMag = VoltMag / CurrMag * AppBIACfg.RtiaCurrValue[0];
     VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
-    printf("Freq: %.2f Hz, Mag: %.3f Ohm, Phase: %.3f rad\n", AppBIACfg.FreqofData, VoltMag, VoltPhase);
+    
     pOut[i].Magnitude = VoltMag;
     pOut[i].Phase = VoltPhase;
   }

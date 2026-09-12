@@ -9,6 +9,7 @@ build/
 # Removed legacy application files
 GUI_App/src/
 deploy.sh
+data.csv
 deploy_windows_64.bat
 AD5940_Files/BioZ_Analyzer/AD5940Main.c
 AD5940_Files/BioZ_Analyzer/ADICUP3029/
